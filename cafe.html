@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Local Business SEO -->
+    <meta name="geo.region" content="US-WA">
+    <meta name="geo.placename" content="Seattle">
+    <meta name="geo.position" content="47.6062;-122.3321">
+    <meta name="ICBM" content="47.6062, -122.3321">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brewandbloom.com">
+    <meta property="og:title" content="Brew & Bloom | Specialty Coffee & Cafe">
+    <meta property="og:description" content="Artisanal coffee, fresh pastries, and cozy atmosphere. Your perfect spot for coffee conversations.">
+    <meta property="og:image" content="https://brewandbloom.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Brew & Bloom Coffee Cafe">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Brew & Bloom">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://brewandbloom.com">
+    <meta property="twitter:title" content="Brew & Bloom | Specialty Coffee & Cafe">
+    <meta property="twitter:description" content="Artisanal coffee, fresh pastries, and cozy atmosphere. Your perfect spot for coffee conversations.">
+    <meta property="twitter:image" content="https://brewandbloom.com/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://brewandbloom.com">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Author -->
+    <meta name="author" content="Brew & Bloom">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#8B4513">
+    <meta name="msapplication-TileColor" content="#8B4513">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8B4513">
+    
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <title>Brew & Bloom | Specialty Coffee & Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8B4513;
+            --primary-light: #A0522D;
+            --primary-dark: #654321;
+            --secondary: #D2691E;
+            --dark: #121212;
+            --dark-light: #2d2d2d;
+            --light: #ffffff;
+            --cream: #F5F0E6;
+            --glass: rgba(255, 255, 255, 0.95);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --radius: 28px;
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+        }
+
+        .dark-theme {
+            --primary: #A0522D;
+            --primary-light: #CD853F;
+            --primary-dark: #8B4513;
+            --secondary: #DEB887;
+            --dark: #f0f0f0;
+            --dark-light: #e0e0e0;
+            --light: #121212;
+            --cream: #1a1a1a;
+            --glass: rgba(18, 18, 18, 0.95);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Base Mobile Styles */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 14px;
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: var(--cream); 
+            color: var(--dark); 
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: var(--transition);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            font-size: 1.2rem;
+        }
+
+        .mobile-menu-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            z-index: 1001;
+            padding: 80px 30px 40px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+
+        .theme-toggle-mobile {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        .theme-toggle-mobile:hover {
+            transform: rotate(30deg);
+        }
+
+        /* Desktop Navigation - Hidden on Mobile */
+        .desktop-nav {
+            display: none;
+        }
+
+        /* Mobile Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 40px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+
+        #home .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        #home h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 10px 0;
+            color: white;
+            line-height: 1.1;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #e6d3c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #home .tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 25px 0 35px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.4);
+        }
+
+        /* Coffee Stats */
+        .coffee-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Mobile Sections */
+        section {
+            padding: 60px 0;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        .section-header p {
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 6px 15px;
+            background: rgba(139, 69, 19, 0.1);
+            border-radius: 100px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        /* Menu Categories */
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            font-weight: 800;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-title i {
+            font-size: 1.2rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .menu-img-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .menu-card:hover .menu-img {
+            transform: scale(1.05);
+        }
+
+        .menu-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gradient);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .hot-badge {
+            background: #e74c3c;
+        }
+
+        .best-seller-badge {
+            background: #f39c12;
+        }
+
+        .menu-info {
+            padding: 20px;
+        }
+
+        .menu-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-info .description {
+            font-size: 0.9rem;
+            color: var(--dark-light);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .menu-info .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .menu-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .order-btn {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .order-btn:hover {
+            opacity: 0.9;
+        }
+
+        .customize-btn {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .customize-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Coffee Tags */
+        .coffee-tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .coffee-tag {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 15px;
+            background: rgba(210, 105, 30, 0.1);
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .strong-tag {
+            background: rgba(139, 69, 19, 0.1);
+            color: var(--primary);
+        }
+
+        .iced-tag {
+            background: rgba(52, 152, 219, 0.1);
+            color: #3498db;
+        }
+
+        .prep-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        /* Roast Types */
+        .roast-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .roast-card {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .roast-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .roast-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Instagram Section */
+        #instagram {
+            background: rgba(255,255,255,0.05);
+            margin: 30px 16px;
+            padding: 50px 20px;
+            border-radius: 20px;
+        }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .insta-post {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .insta-post:hover {
+            transform: scale(1.03);
+        }
+
+        .insta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        /* Mobile Reviews */
+        .reviews-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .reviews-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .review-card {
+            min-width: 280px;
+            background: var(--light);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Mobile Contact Section */
+        .location-box {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-details {
+            margin: 25px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .order-now-btn {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .reserve-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        /* Operating Hours */
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .hour-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .hour-item h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 20px 30px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .footer-social a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            color: white;
+            background: var(--gradient);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 20px;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: var(--gradient);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Cart Modal */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--light);
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-modal.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Tablet Styles (768px and up) */
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+            
+            .container {
+                padding: 0 24px;
+            }
+            
+            .mobile-header {
+                display: none;
+            }
+            
+            .desktop-nav {
+                display: flex;
+                position: fixed;
+                top: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                max-width: 800px;
+                background: var(--glass);
+                backdrop-filter: blur(20px);
+                padding: 18px 40px;
+                border-radius: 100px;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .desktop-nav.scrolled {
+                padding: 14px 40px;
+                top: 20px;
+            }
+            
+            .nav-links {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+            
+            .nav-links a {
+                text-decoration: none;
+                color: var(--dark);
+                font-weight: 600;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                position: relative;
+                padding: 8px 0;
+            }
+            
+            .nav-links a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--gradient);
+                transition: width 0.4s ease;
+            }
+            
+            .nav-links a:hover::before {
+                width: 100%;
+            }
+            
+            .cart-indicator {
+                position: relative;
+                cursor: pointer;
+            }
+            
+            .cart-indicator span {
+                background: var(--primary);
+                color: white;
+                font-size: 0.7rem;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+            }
+            
+            .theme-toggle {
+                background: var(--gradient);
+                color: white;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                transition: var(--transition);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            #home {
+                padding: 100px 40px 60px;
+            }
+            
+            #home h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .cta-button {
+                max-width: 350px;
+            }
+            
+            .location-box {
+                flex-direction: row;
+                padding: 40px;
+            }
+            
+            .contact-actions {
+                flex-direction: row;
+            }
+            
+            .contact-btn {
+                flex: 1;
+            }
+            
+            .insta-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+            
+            .reviews-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                overflow-x: visible;
+            }
+            
+            .review-card {
+                min-width: 0;
+            }
+            
+            .hours-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .roast-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .notification {
+                left: auto;
+                right: 30px;
+                bottom: 30px;
+                max-width: 300px;
+            }
+        }
+
+        /* Desktop Styles (1024px and up) */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+            
+            #home h1 {
+                font-size: 4.5rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .section-header h2 {
+                font-size: 3rem;
+            }
+            
+            .category-title {
+                font-size: 2rem;
+            }
+            
+            .reviews-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .insta-grid {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 20px;
+            }
+            
+            .location-box {
+                gap: 50px;
+                padding: 50px;
+            }
+            
+            .contact-info h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Large Desktop Styles (1440px and up) */
+        @media (min-width: 1440px) {
+            #home h1 {
+                font-size: 5.5rem;
+            }
+            
+            .container {
+                padding: 0 40px;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) {
+            .menu-card:hover {
+                transform: none;
+            }
+            
+            .menu-card:active {
+                transform: scale(0.98);
+            }
+            
+            .cta-button:active,
+            .action-btn:active,
+            .contact-btn:active {
+                transform: scale(0.95);
+            }
+        }
+
+        /* High Contrast Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #8B4513;
+                --secondary: #D2691E;
+            }
+            
+            .menu-card,
+            .review-card,
+            .location-box {
+                border: 2px solid var(--dark);
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .menu-img {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-header">
+        <div class="logo">
+            <i class="fas fa-coffee"></i>
+            Brew & Bloom
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="mobile-menu-btn" id="cartBtn" style="position: relative;">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-indicator" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <div class="logo" style="position: absolute; top: 20px; left: 30px;">
+            <i class="fas fa-coffee"></i>
+            Brew & Bloom
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+            <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+            <a href="#roasts" onclick="closeMobileMenu()">Roasts</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+        </div>
+        <button class="theme-toggle-mobile" id="themeToggleMobile">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Your Coffee Order <span id="cartTotalItems">(0 items)</span></h3>
+            <button onclick="closeCart()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <div style="text-align: center; padding: 40px 20px; color: var(--dark-light);">
+                <i class="fas fa-coffee" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.3;"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: 600;">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <button class="cta-button" onclick="checkout()" style="width: 100%;">
+                <i class="fas fa-shopping-bag"></i>
+                Order Now
+            </button>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" id="desktopNav">
+        <div class="logo">
+            <i class="fas fa-coffee"></i>
+            Brew & Bloom
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#roasts">Roasts</a>
+            <a href="#contact">Contact</a>
+            <div class="cart-indicator" id="desktopCartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="desktopCartCount">0</span>
+            </div>
+            <button class="theme-toggle" id="themeToggleDesktop">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="home">
+        <div class="hero-content">
+            <p class="subtitle">ARTISAN COFFEE & COZY ATMOSPHERE</p>
+            <h1>Brew & Bloom</h1>
+            <p class="tagline">Specialty coffee crafted with passion, served in a warm, inviting space. Where every cup tells a story and every visit feels like home.</p>
+            <button class="cta-button" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
+                <i class="fas fa-coffee"></i>
+                Explore Our Menu
+            </button>
+            
+            <div class="coffee-stats">
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Coffee Varieties</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8★</div>
+                    <div class="stat-label">Customer Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Fresh</div>
+                    <div class="stat-label">Daily Roasts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="menu">
+            <div class="section-header">
+                <p>Our Coffee Selection</p>
+                <h2>Menu Highlights</h2>
+            </div>
+
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-mug-hot"></i>
+                    Signature Coffees
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-badge best-seller-badge">Best Seller</div>
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop" class="menu-img" alt="Caramel Macchiato">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Caramel Macchiato <span class="price">$5.49</span></h3>
+                            <p class="description">Freshly brewed espresso with vanilla syrup, steamed milk, and caramel drizzle.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Ready in 4 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag">Espresso</span>
+                                <span class="coffee-tag">Sweet</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Caramel Macchiato', 5.49, 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-badge hot-badge">Hot</div>
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=600&auto=format&fit=crop" class="menu-img" alt="Flat White">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Flat White <span class="price">$4.99</span></h3>
+                            <p class="description">Double ristretto shot with microfoam milk for a velvety smooth texture.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Ready in 3 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag strong-tag">Strong</span>
+                                <span class="coffee-tag">Creamy</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Flat White', 4.99, 'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=600&auto=format&fit=crop" class="menu-img" alt="Pour Over">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Single Origin Pour Over <span class="price">$6.99</span></h3>
+                            <p class="description">Ethiopian Yirgacheffe beans, hand-poured for maximum flavor extraction.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Ready in 6 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag">Single Origin</span>
+                                <span class="coffee-tag strong-tag">Light Roast</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Single Origin Pour Over', 6.99, 'https://images.unsplash.com/photo-1561047029-3000c68339ca?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-snowflake"></i>
+                    Iced & Cold Brew
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-badge">New</div>
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&auto=format&fit=crop" class="menu-img" alt="Cold Brew">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Nitro Cold Brew <span class="price">$5.99</span></h3>
+                            <p class="description">Smooth cold brew infused with nitrogen for a creamy, cascading texture.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Ready in 2 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag iced-tag">Iced</span>
+                                <span class="coffee-tag strong-tag">Strong</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Nitro Cold Brew', 5.99, 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&auto=format&fit=crop" class="menu-img" alt="Iced Latte">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Iced Vanilla Latte <span class="price">$5.49</span></h3>
+                            <p class="description">Espresso, vanilla syrup, and milk poured over ice, topped with foam.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Ready in 3 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag iced-tag">Iced</span>
+                                <span class="coffee-tag">Sweet</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Iced Vanilla Latte', 5.49, 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&auto=format&fit=crop" class="menu-img" alt="Matcha Latte">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Iced Matcha Latte <span class="price">$5.99</span></h3>
+                            <p class="description">Ceremonial grade matcha whisked with milk and poured over ice.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Ready in 4 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag iced-tag">Iced</span>
+                                <span class="coffee-tag">Matcha</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Iced Matcha Latte', 5.99, 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-cookie-bite"></i>
+                    Pastries & Snacks
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-badge">Fresh Daily</div>
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop" class="menu-img" alt="Croissant">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Butter Croissant <span class="price">$3.99</span></h3>
+                            <p class="description">Freshly baked French-style croissant with layers of buttery pastry.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Fresh daily</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag">Buttery</span>
+                                <span class="coffee-tag">Flaky</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Butter Croissant', 3.99, 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop" class="menu-img" alt="Chocolate Cake">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Flourless Chocolate Cake <span class="price">$6.99</span></h3>
+                            <p class="description">Rich, dense chocolate cake made without flour, topped with berries.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Fresh daily</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag">Gluten Free</span>
+                                <span class="coffee-tag">Rich</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Flourless Chocolate Cake', 6.99, 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-badge">Vegan</div>
+                        <div class="menu-img-container">
+                            <img src="https://images.unsplash.com/photo-1519861531473-920034658307?w=600&auto=format&fit=crop" class="menu-img" alt="Avocado Toast">
+                        </div>
+                        <div class="menu-info">
+                            <h3>Avocado Toast <span class="price">$8.99</span></h3>
+                            <p class="description">Sourdough toast with smashed avocado, cherry tomatoes, and chili flakes.</p>
+                            <div class="prep-time">
+                                <i class="fas fa-clock"></i>
+                                <span>Made fresh in 8 min</span>
+                            </div>
+                            <div class="coffee-tags">
+                                <span class="coffee-tag">Vegan</span>
+                                <span class="coffee-tag">Healthy</span>
+                            </div>
+                            <div class="menu-actions">
+                                <button class="action-btn order-btn" onclick="addToCart('Avocado Toast', 8.99, 'https://images.unsplash.com/photo-1519861531473-920034658307?w=600&auto=format&fit=crop')">
+                                    <i class="fas fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roasts">
+            <div class="section-header">
+                <p>Our Coffee Philosophy</p>
+                <h2>Roast Profiles</h2>
+            </div>
+            <div class="roast-grid">
+                <div class="roast-card">
+                    <div class="roast-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Light Roast</h4>
+                    <p style="font-size: 0.8rem; color: var(--dark-light);">Bright & acidic notes</p>
+                </div>
+                <div class="roast-card">
+                    <div class="roast-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h4>Medium Roast</h4>
+                    <p style="font-size: 0.8rem; color: var(--dark-light);">Balanced flavor</p>
+                </div>
+                <div class="roast-card">
+                    <div class="roast-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h4>Dark Roast</h4>
+                    <p style="font-size: 0.8rem; color: var(--dark-light);">Bold & robust</p>
+                </div>
+                <div class="roast-card">
+                    <div class="roast-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h4>Single Origin</h4>
+                    <p style="font-size: 0.8rem; color: var(--dark-light);">Traceable sources</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="section-header">
+                <p>Coffee Conversations</p>
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">AR</div>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <strong>Alex Rivera</strong>
+                        </div>
+                    </div>
+                    <p>"Best flat white in the city! The coffee is perfectly balanced and the atmosphere is so cozy. My go-to spot for meetings."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">MJ</div>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <strong>Maya Johnson</strong>
+                        </div>
+                    </div>
+                    <p>"The nitro cold brew is incredible! Smooth, creamy, and just the right amount of caffeine. Plus, the avocado toast is perfection!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">SP</div>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <strong>Sam Patel</strong>
+                        </div>
+                    </div>
+                    <p>"As a coffee snob, I'm impressed. Their single origin pour over is expertly crafted. You can taste the passion in every cup."</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="instagram">
+        <div class="container">
+            <div class="section-header">
+                <p>Daily Brews</p>
+                <h2>@BrewAndBloomCafe</h2>
+            </div>
+            <div class="insta-grid">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&auto=format&fit=crop" class="insta-post" alt="Coffee Art">
+                <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=400&auto=format&fit=crop" class="insta-post" alt="Cafe Interior">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&auto=format&fit=crop" class="insta-post" alt="Iced Coffee">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&auto=format&fit=crop" class="insta-post" alt="Pastries">
+                <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400&auto=format&fit=crop" class="insta-post" alt="Pour Over">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&auto=format&fit=crop" class="insta-post" alt="Cold Brew">
+            </div>
+            <div style="text-align: center;">
+                <a href="https://instagram.com" class="insta-btn" target="_blank">
+                    <i class="fab fa-instagram"></i> Follow Our Coffee Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="contact">
+            <div class="location-box">
+                <div class="contact-info">
+                    <h2>Visit Our Cafe</h2>
+                    <p>Your cozy corner for coffee and conversation.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>123 Coffee Street</strong><br>
+                                Seattle, WA 98101
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Brewing Hours</strong>
+                                <div class="hours-grid">
+                                    <div class="hour-item">
+                                        <h4>Mon - Fri</h4>
+                                        <p>6am - 8pm</p>
+                                    </div>
+                                    <div class="hour-item">
+                                        <h4>Saturday</h4>
+                                        <p>7am - 9pm</p>
+                                    </div>
+                                    <div class="hour-item">
+                                        <h4>Sunday</h4>
+                                        <p>7am - 6pm</p>
+                                    </div>
+                                    <div class="hour-item">
+                                        <h4>WiFi</h4>
+                                        <p>24/7 Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>+1 (555) 123-BREW</strong><br>
+                                <small>For orders & inquiries</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-actions">
+                        <button class="contact-btn order-now-btn" onclick="orderNow()">
+                            <i class="fas fa-mobile-alt"></i> Order Ahead
+                        </button>
+                        <button class="contact-btn reserve-btn" onclick="reserveTable()">
+                            <i class="fas fa-chair"></i> Reserve Table
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.3851146918295!2d-122.3321!3d47.6062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM2JzIyLjMiTiAxMjLCsDE5JzU1LjYiVw!5e0!3m2!1sen!2sus!4v1625685000000!5m2!1sen!2sus"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Brew & Bloom</div>
+            <p>Specialty coffee crafted with passion, served with warmth</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 BREW & BLOOM COFFEE CAFE. All rights reserved.<br>
+                Freshly roasted daily • Free WiFi • Cozy seating
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <div>
+            <strong>Added to Cart!</strong>
+            <div id="notificationMessage">Item added successfully</div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        
+        function openMobileMenu() {
+            mobileNav.classList.add('active');
+            mobileNavOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMobileMenu() {
+            mobileNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileNavOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Cart Functionality
+        const cartBtn = document.getElementById('cartBtn');
+        const desktopCartBtn = document.getElementById('desktopCartBtn');
+        const cartModal = document.getElementById('cartModal');
+        const cartCount = document.getElementById('cartCount');
+        const desktopCartCount = document.getElementById('desktopCartCount');
+        const cartItems = document.getElementById('cartItems');
+        const cartTotalPrice = document.getElementById('cartTotalPrice');
+        const cartTotalItems = document.getElementById('cartTotalItems');
+        
+        let cart = [];
+        
+        function openCart() {
+            cartModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            updateCartDisplay();
+        }
+        
+        function closeCart() {
+            cartModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        cartBtn.addEventListener('click', openCart);
+        desktopCartBtn.addEventListener('click', openCart);
+        
+        // Close cart on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCart();
+                closeMobileMenu();
+            }
+        });
+        
+        // Add to Cart function
+        function addToCart(itemName, price, image) {
+            cart.push({
+                name: itemName,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+            
+            updateCartCount();
+            showNotification(`Added ${itemName} to cart!`);
+        }
+        
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            desktopCartCount.textContent = totalItems;
+        }
+        
+        function updateCartDisplay() {
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div style="text-align: center; padding: 40px 20px; color: var(--dark-light);">
+                        <i class="fas fa-coffee" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.3;"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+                cartTotalPrice.textContent = '$0.00';
+                cartTotalItems.textContent = '(0 items)';
+                return;
+            }
+            
+            let total = 0;
+            let itemsHTML = '';
+            
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                itemsHTML += `
+                    <div class="cart-item" style="display: flex; align-items: center; padding: 15px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                        <img src="${item.image}" style="width: 60px; height: 60px; border-radius: 10px; object-fit: cover; margin-right: 15px;">
+                        <div style="flex: 1;">
+                            <div style="font-weight: 600;">${item.name}</div>
+                            <div style="color: var(--primary); font-weight: 700;">$${item.price.toFixed(2)}</div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
+                                <button onclick="updateQuantity(${index}, -1)" style="background: var(--primary); color: white; border: none; width: 25px; height: 25px; border-radius: 50%; cursor: pointer;">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="updateQuantity(${index}, 1)" style="background: var(--primary); color: white; border: none; width: 25px; height: 25px; border-radius: 50%; cursor: pointer;">+</button>
+                                <button onclick="removeFromCart(${index})" style="margin-left: auto; background: none; border: none; color: #e74c3c; cursor: pointer;">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItems.innerHTML = itemsHTML;
+            cartTotalPrice.textContent = `$${total.toFixed(2)}`;
+            cartTotalItems.textContent = `(${cart.length} items)`;
+        }
+        
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            if (cart[index].quantity < 1) {
+                cart.splice(index, 1);
+            }
+            updateCartCount();
+            updateCartDisplay();
+        }
+        
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            updateCartDisplay();
+        }
+        
+        function checkout() {
+            if (cart.length === 0) {
+                showNotification('Your cart is empty!');
+                return;
+            }
+            
+            const orderSummary = cart.map(item => `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`).join('\n');
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const message = `Hello Brew & Bloom! I would like to place an order:\n\n${orderSummary}\n\nTotal: $${total.toFixed(2)}\n\nPlease have it ready for pickup.`;
+            
+            window.open(`https://wa.me/15551234567?text=${encodeURIComponent(message)}`, '_blank');
+            showNotification('Opening WhatsApp for order confirmation!');
+        }
+        
+        // Theme Management
+        function setupTheme() {
+            const themeButtons = [
+                document.getElementById('themeToggleMobile'),
+                document.getElementById('themeToggleDesktop')
+            ].filter(Boolean);
+            
+            // Check system preference
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check localStorage for saved theme
+            const currentTheme = localStorage.getItem('theme');
+            
+            // Set initial theme
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    document.body.classList.add('dark-theme');
+                    themeButtons.forEach(btn => {
+                        if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+                    });
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    themeButtons.forEach(btn => {
+                        if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+                    });
+                }
+            };
+            
+            if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+                setTheme(true);
+                localStorage.setItem('theme', 'dark');
+            } else {
+                setTheme(false);
+                localStorage.setItem('theme', 'light');
+            }
+            
+            // Toggle theme
+            themeButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', () => {
+                        const isDark = document.body.classList.contains('dark-theme');
+                        if (isDark) {
+                            setTheme(false);
+                            localStorage.setItem('theme', 'light');
+                        } else {
+                            setTheme(true);
+                            localStorage.setItem('theme', 'dark');
+                        }
+                    });
+                }
+            });
+            
+            // Listen for system theme changes
+            prefersDarkScheme.addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches);
+                }
+            });
+        }
+        
+        // Navigation scroll effect
+        const desktopNav = document.getElementById('desktopNav');
+        if (desktopNav) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    desktopNav.classList.add('scrolled');
+                } else {
+                    desktopNav.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // Order Now function
+        function orderNow() {
+            const text = `Hi Brew & Bloom! I would like to place an order for pickup.`;
+            window.open(`https://wa.me/15551234567?text=${encodeURIComponent(text)}`, '_blank');
+            showNotification('Opening order system...');
+        }
+        
+        // Reserve Table function
+        function reserveTable() {
+            showNotification('Checking table availability...');
+            setTimeout(() => {
+                window.open('#', '_blank');
+            }, 1000);
+        }
+        
+        // Notification system
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const messageElement = document.getElementById('notificationMessage');
+            
+            messageElement.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                    
+                    // Calculate offset for fixed header
+                    const headerHeight = window.innerWidth < 768 ? 70 : 100;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Touch optimization
+        document.addEventListener('touchstart', function() {}, {passive: true});
+        
+        // Initialize everything
+        setupTheme();
+        
+        // Handle resize events
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                // Close mobile menu on resize to desktop
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            }, 250);
+        });
+    </script>
+</body>
+</html>

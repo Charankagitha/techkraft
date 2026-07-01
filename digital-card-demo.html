@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechKraft DigitalCards | Next-Gen Business Card Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8A2BE2;
+            --secondary: #00D4FF;
+            --accent: #FF2E63;
+            --dark: #0A0A0F;
+            --light: #F8F9FF;
+            --gray: #A0A0C0;
+            --gradient-primary: linear-gradient(135deg, #8A2BE2 0%, #4A00E0 100%);
+            --gradient-secondary: linear-gradient(135deg, #00D4FF 0%, #0080FF 100%);
+            --gradient-accent: linear-gradient(135deg, #FF2E63 0%, #FF8E53 100%);
+            --gradient-dark: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.25);
+            --shadow-glow: 0 0 30px rgba(138, 43, 226, 0.5);
+            --radius: 24px;
+            --radius-large: 40px;
+            --transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 46, 99, 0.05) 0%, transparent 30%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p,
+        span,
+        a,
+        li {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(10, 10, 15, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: var(--shadow-glow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+            transform: rotate(30deg);
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .logo-text h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(to right, #FFFFFF, #B19CD9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 0.5rem 0;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: var(--secondary);
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-secondary);
+            bottom: 0;
+            left: 0;
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        .header-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+        }
+
+        .hero {
+            padding: 12rem 0 8rem;
+            background: rgba(10, 10, 15, 0.6);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+            top: -400px;
+            right: -300px;
+            filter: blur(50px);
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+            bottom: -300px;
+            left: -200px;
+            filter: blur(50px);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: var(--radius-large);
+            padding: 4rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        .hero h2 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #FFFFFF, #00D4FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+            text-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.3rem 3rem;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--gradient-accent);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .cta-button:hover:before {
+            width: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(138, 43, 226, 0.4), 0 0 30px rgba(255, 46, 99, 0.5);
+        }
+
+        .secondary-button {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .secondary-button:hover {
+            border-color: var(--secondary);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 8s ease-in-out infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            background: rgba(138, 43, 226, 0.1);
+        }
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+            background: rgba(0, 212, 255, 0.1);
+        }
+        .floating-element:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+            background: rgba(255, 46, 99, 0.1);
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            33% {
+                transform: translateY(-30px) rotate(5deg) scale(1.05);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+            66% {
+                transform: translateY(15px) rotate(-5deg) scale(0.95);
+            }
+        }
+
+        .glowing-orb {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, transparent 70%);
+            filter: blur(40px);
+            z-index: 0;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            top: 10%;
+            right: 15%;
+            animation-delay: 0s;
+        }
+        .orb-2 {
+            bottom: 10%;
+            left: 10%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, transparent 70%);
+            animation-delay: 4s;
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        .category-filter {
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            margin-bottom: 4rem;
+        }
+
+        .section-title h3 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #FFFFFF, #B19CD9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title p {
+            font-size: 1.3rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 5rem;
+        }
+
+        .filter-btn {
+            padding: 1.2rem 2.5rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .filter-btn i {
+            font-size: 1.3rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow);
+            border-color: transparent;
+        }
+
+        .cards-grid {
+            padding: 2rem 0 8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 3.5rem;
+        }
+
+        .card-demo {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-large);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--glass-border);
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+
+        .card-demo:hover {
+            transform: translateY(-25px) scale(1.03) perspective(1000px) rotateX(5deg);
+            box-shadow: var(--shadow-hover), var(--shadow-glow);
+        }
+
+        .card-demo:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .card-demo:hover:before {
+            opacity: 1;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 3;
+            box-shadow: 0 10px 20px rgba(255, 46, 99, 0.3);
+            transform: rotate(5deg);
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%,
+            100% {
+                transform: rotate(5deg) scale(1);
+            }
+            50% {
+                transform: rotate(5deg) scale(1.05);
+                box-shadow: 0 10px 30px rgba(255, 46, 99, 0.5);
+            }
+        }
+
+        .card-header {
+            padding: 2.5rem 2.5rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-icon:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+            transform: rotate(30deg);
+        }
+
+        .card-demo:hover .card-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .card-title h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .card-title p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+
+        .card-image {
+            height: 250px;
+            margin: 0 2.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .card-demo:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-image:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        }
+
+        .card-preview {
+            padding: 2.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-preview h5 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: white;
+        }
+
+        .card-preview p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .card-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-tag {
+            background: rgba(138, 43, 226, 0.2);
+            color: var(--secondary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: var(--transition);
+        }
+
+        .card-demo:hover .feature-tag {
+            background: rgba(0, 212, 255, 0.2);
+            color: white;
+            border-color: rgba(0, 212, 255, 0.4);
+        }
+
+        .demo-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .demo-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--gradient-secondary);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .demo-btn:hover:before {
+            width: 100%;
+        }
+
+        .demo-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.4), 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        /* === COLOR VARIATIONS FOR CARD ICONS === */
+        .color-1 {
+            background: var(--gradient-primary);
+        }
+        .color-2 {
+            background: var(--gradient-secondary);
+        }
+        .color-3 {
+            background: var(--gradient-accent);
+        }
+        .color-4 {
+            background: linear-gradient(135deg, #9C27B0 0%, #673AB7 100%);
+        }
+        .color-5 {
+            background: linear-gradient(135deg, #FF9800 0%, #FF5722 100%);
+        }
+        .color-6 {
+            background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+        }
+
+        /* === NEW COLOR CLASSES FOR ADDED CARDS === */
+        .color-7 {
+            background: linear-gradient(135deg, #FF6B9D 0%, #C44D8C 100%);
+        }
+        .color-8 {
+            background: linear-gradient(135deg, #4A90D9 0%, #2E5CB8 100%);
+        }
+        .color-9 {
+            background: linear-gradient(135deg, #FF6B35 0%, #E53E2B 100%);
+        }
+        .color-10 {
+            background: linear-gradient(135deg, #FF8A5C 0%, #E66A2E 100%);
+        }
+        .color-11 {
+            background: linear-gradient(135deg, #26C6B8 0%, #009688 100%);
+        }
+        .color-12 {
+            background: linear-gradient(135deg, #FF6B8A 0%, #E8436A 100%);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 3.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 3.5rem 2.8rem;
+            border-radius: var(--radius-large);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .feature:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .feature:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: var(--shadow-hover), var(--shadow-glow);
+        }
+
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-primary);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2.5rem;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature:hover .feature-icon {
+            transform: rotate(15deg) scale(1.1);
+            background: var(--gradient-accent);
+        }
+
+        .feature-icon:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+            transform: rotate(30deg);
+        }
+
+        .feature h4 {
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .feature p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            filter: blur(50px);
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            padding: 6rem 4rem;
+            border-radius: var(--radius-large);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        .cta-section h3 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, #FFFFFF, #00D4FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .cta-section p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(5, 5, 10, 0.8);
+            padding: 6rem 0 3rem;
+            position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo .logo-icon {
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-links h4:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient-primary);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(10px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .social-links a {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-8px) scale(1.1);
+            border-color: transparent;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animation classes */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            width: 100px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -50px;
+            animation: rippleAnim 1s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes rippleAnim {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h2 {
+                font-size: 3.8rem;
+            }
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+            .cta-section h3 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3.2rem;
+            }
+            .section-title h3 {
+                font-size: 2.8rem;
+            }
+            nav ul {
+                gap: 1.5rem;
+            }
+            .hero-content {
+                padding: 3rem;
+            }
+            .cta-content {
+                padding: 5rem 3rem;
+            }
+            .cta-section h3 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+            .hero {
+                padding: 10rem 0 6rem;
+            }
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .cta-button {
+                justify-content: center;
+                text-align: center;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .card-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            .card-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2.2rem;
+            }
+            .floating-element {
+                display: none;
+            }
+            .hero:before,
+            .hero:after {
+                display: none;
+            }
+            .filter-buttons {
+                gap: 1rem;
+            }
+            .cta-section h3 {
+                font-size: 2.5rem;
+            }
+            .cta-section p {
+                font-size: 1.2rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: rgba(10, 10, 15, 0.95);
+                backdrop-filter: blur(20px);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 2rem;
+                border-radius: 0 0 24px 24px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav li {
+                width: 100%;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            nav a:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+            .hero-content {
+                padding: 2.5rem 1.5rem;
+            }
+            .section-title h3 {
+                font-size: 2.2rem;
+            }
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .filter-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            .card-demo {
+                margin: 0 1rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature {
+                padding: 3rem 2rem;
+            }
+            .cta-section h3 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1.1rem;
+            }
+            .cta-content {
+                padding: 4rem 2rem;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated background particles -->
+    <div id="particles-js"></div>
+
+    <!-- Glowing orbs -->
+    <div class="glowing-orb orb-1"></div>
+    <div class="glowing-orb orb-2"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-id-card-alt"></i></div>
+                    <div class="logo-text">
+                        <h1>TechKraft DigitalCards</h1>
+                        <p>Next-Gen Business Networking</p>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="techkraftdigitals.html">Home</a></li>
+                        <li><a href="#demos">Demos</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" class="header-cta">Get Started</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="floating-elements">
+            <div class="floating-element"><i class="fas fa-qrcode"></i></div>
+            <div class="floating-element"><i class="fas fa-share-alt"></i></div>
+            <div class="floating-element"><i class="fas fa-mobile-alt"></i></div>
+        </div>
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h2>Digital Business Cards That Make An Impression</h2>
+                <p>Create stunning, interactive digital cards for any profession or business. Share your brand, services, and contact information with a single tap.</p>
+                <div class="hero-buttons">
+                    <a href="#demos" class="cta-button">
+                        <i class="fas fa-play-circle"></i>
+                        Explore Demos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter" id="demos">
+        <div class="container">
+            <div class="section-title">
+                <h3>Digital Card Demos</h3>
+                <p>Browse our professionally designed templates for various businesses</p>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th-large"></i> All</button>
+                <button class="filter-btn" data-filter="medical"><i class="fas fa-heartbeat"></i> Medical</button>
+                <button class="filter-btn" data-filter="food"><i class="fas fa-utensils"></i> Food</button>
+                <button class="filter-btn" data-filter="retail"><i class="fas fa-shopping-bag"></i> Retail</button>
+                <button class="filter-btn" data-filter="professional"><i class="fas fa-briefcase"></i> Professional</button>
+                <button class="filter-btn" data-filter="beauty"><i class="fas fa-spa"></i> Beauty</button>
+                <button class="filter-btn" data-filter="education"><i class="fas fa-school"></i> Education</button>
+                <button class="filter-btn" data-filter="health"><i class="fas fa-tooth"></i> Dental</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Grid -->
+    <section class="cards-grid">
+        <div class="container">
+            <div class="grid-container">
+
+                <!-- Clinic -->
+                <div class="card-demo" data-category="medical">
+                    <div class="card-badge">Most Popular</div>
+                    <div class="card-header">
+                        <div class="card-icon color-1"><i class="fas fa-clinic-medical"></i></div>
+                        <div class="card-title"><h4>Clinic Business Card</h4><p>Medical Facility</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Modern Clinic Digital Card</h5>
+                        <p>Showcase medical services, doctor profiles, appointment booking, clinic hours, and patient testimonials with this professional digital card.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Appointment Booking</span>
+                            <span class="feature-tag">Doctor Profiles</span>
+                            <span class="feature-tag">Service Menu</span>
+                        </div>
+                        <a href="clinic.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Doctor -->
+                <div class="card-demo" data-category="medical">
+                    <div class="card-header">
+                        <div class="card-icon color-2"><i class="fas fa-user-md"></i></div>
+                        <div class="card-title"><h4>Doctor Profile Card</h4><p>Medical Professional</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Doctor Digital Card</h5>
+                        <p>Share your medical specialization, credentials, contact details, patient portal, and research publications with a sleek digital card.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Credentials</span>
+                            <span class="feature-tag">Specialization</span>
+                            <span class="feature-tag">Patient Portal</span>
+                        </div>
+                        <a href="doctor.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Lawyer -->
+                <div class="card-demo" data-category="professional">
+                    <div class="card-header">
+                        <div class="card-icon color-3"><i class="fas fa-gavel"></i></div>
+                        <div class="card-title"><h4>Lawyer Business Card</h4><p>Legal Professional</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Legal Practice Card</h5>
+                        <p>Display your legal expertise, practice areas, consultation booking, client testimonials, and case studies in a professional format.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Practice Areas</span>
+                            <span class="feature-tag">Case Studies</span>
+                            <span class="feature-tag">Consultation</span>
+                        </div>
+                        <a href="lawyer.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Cafe -->
+                <div class="card-demo" data-category="food">
+                    <div class="card-badge">Trending</div>
+                    <div class="card-header">
+                        <div class="card-icon color-4"><i class="fas fa-coffee"></i></div>
+                        <div class="card-title"><h4>Cafe Business Card</h4><p>Food & Beverage</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Modern Cafe Card</h5>
+                        <p>Showcase your menu, special brews, location, loyalty program, and events with this inviting digital cafe card.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Digital Menu</span>
+                            <span class="feature-tag">Loyalty Program</span>
+                            <span class="feature-tag">Events</span>
+                        </div>
+                        <a href="cafe.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Restaurant -->
+                <div class="card-demo" data-category="food">
+                    <div class="card-header">
+                        <div class="card-icon color-5"><i class="fas fa-utensils"></i></div>
+                        <div class="card-title"><h4>Restaurant Card</h4><p>Fine Dining</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Restaurant Digital Card</h5>
+                        <p>Feature your menu, reservation system, chef's specials, customer reviews, and catering services with an elegant digital card.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Reservations</span>
+                            <span class="feature-tag">Digital Menu</span>
+                            <span class="feature-tag">Catering</span>
+                        </div>
+                        <a href="restaurant.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Chef -->
+                <div class="card-demo" data-category="food">
+                    <div class="card-header">
+                        <div class="card-icon color-6"><i class="fas fa-hat-chef"></i></div>
+                        <div class="card-title"><h4>Chef Profile Card</h4><p>Culinary Professional</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Chef Digital Card</h5>
+                        <p>Showcase your culinary portfolio, signature dishes, cooking classes, catering services, and media features with style.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Portfolio</span>
+                            <span class="feature-tag">Cooking Classes</span>
+                            <span class="feature-tag">Catering</span>
+                        </div>
+                        <a href="chef.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Beauty Parlour (NEW) -->
+                <div class="card-demo" data-category="beauty">
+                    <div class="card-badge">Glow Up</div>
+                    <div class="card-header">
+                        <div class="card-icon color-7"><i class="fas fa-spa"></i></div>
+                        <div class="card-title"><h4>Beauty Parlour</h4><p>Salon & Spa</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1560066984-138f9de1625d?w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Glamour Studio Card</h5>
+                        <p>Hair, makeup, nail art, bridal packages, online booking & loyalty rewards.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Bridal Makeup</span>
+                            <span class="feature-tag">Online Booking</span>
+                            <span class="feature-tag">Loyalty Points</span>
+                        </div>
+                        <a href="beautyparlour.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                    </div>
+                </div>
+
+                <!-- School (NEW) -->
+                <div class="card-demo" data-category="education">
+                    <div class="card-header">
+                        <div class="card-icon color-8"><i class="fas fa-school"></i></div>
+                        <div class="card-title"><h4>School Card</h4><p>Education</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Smart School Digital Card</h5>
+                        <p>Academic calendar, admission inquiry, events, parent portal, and virtual tour.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Admission 2025</span>
+                            <span class="feature-tag">Parent App</span>
+                            <span class="feature-tag">Events</span>
+                        </div>
+                        <a href="schooldemo.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                    </div>
+                </div>
+
+                <!-- Toy Store (NEW) -->
+                <div class="card-demo" data-category="retail">
+                    <div class="card-header">
+                        <div class="card-icon color-9"><i class="fas fa-rocket"></i></div>
+                        <div class="card-title"><h4>Toy Store</h4><p>Retail Play</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1558060370-d6448f6de6fa?w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Wonder Toy Emporium</h5>
+                        <p>Educational toys, new arrivals, birthday gift guides, loyalty club & store locator.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Gift Finder</span>
+                            <span class="feature-tag">Birthday Deals</span>
+                            <span class="feature-tag">Store Events</span>
+                        </div>
+                        <a href="toystore.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                    </div>
+                </div>
+
+                <!-- Cloud Kitchen (NEW) -->
+                <div class="card-demo" data-category="food">
+                    <div class="card-badge">Fastest Delivery</div>
+                    <div class="card-header">
+                        <div class="card-icon color-10"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="card-title"><h4>Cloud Kitchen</h4><p>Virtual Food Brand</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>NeoBites Cloud Kitchen</h5>
+                        <p>Multi-cuisine menu, combo deals, whatsapp ordering, delivery tracking & catering.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">WhatsApp Order</span>
+                            <span class="feature-tag">Combo Offers</span>
+                            <span class="feature-tag">Bulk Catering</span>
+                        </div>
+                        <a href="cloudkitchen.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                    </div>
+                </div>
+
+                <!-- Dental Clinic (NEW) -->
+                <div class="card-demo" data-category="health">
+                    <div class="card-header">
+                        <div class="card-icon color-11"><i class="fas fa-tooth"></i></div>
+                        <div class="card-title"><h4>Dental Clinic</h4><p>Oral Care</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>SmileCare Dental</h5>
+                        <p>Cosmetic dentistry, implants, appointment scheduler, insurance info & patient reviews.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Emergency Slot</span>
+                            <span class="feature-tag">Insurance</span>
+                            <span class="feature-tag">Virtual Consult</span>
+                        </div>
+                        <a href="dental.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                    </div>
+                </div>
+
+                <!-- Ice Cream Parlour (NEW) -->
+                <div class="card-demo" data-category="food">
+                    <div class="card-header">
+                        <div class="card-icon color-12"><i class="fas fa-ice-cream"></i></div>
+                        <div class="card-title"><h4>Ice Cream Parlour</h4><p>Frozen Delights</p></div>
+                    </div>
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=800&q=80');"></div>
+                    <div class="card-preview">
+                        <h5>Chill & Scoop Parlour</h5>
+                        <p>Flavors of the month, custom sundae builder, party booking, loyalty stamps & delivery.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Sundae Builder</span>
+                            <span class="feature-tag">Party Packages</span>
+                            <span class="feature-tag">Free Scoop</span>
+                        </div>
+                        <a href="icecreamparlour.html" class="demo-btn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h3>Powerful Features</h3>
+                <p>Everything you need to create stunning digital business cards that impress</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-qrcode"></i></div>
+                    <h4>QR Code Integration</h4>
+                    <p>Generate unique QR codes for instant card sharing and scanning at events, meetings, or on printed materials.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Advanced Analytics</h4>
+                    <p>Track views, clicks, shares, and engagement with detailed analytics to measure your card's performance.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Custom Branding</h4>
+                    <p>Customize colors, fonts, layouts, and add your logo to match your brand identity perfectly.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h4>Real-time Updates</h4>
+                    <p>Update your information anytime - changes appear instantly for everyone who has your card.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-share-alt"></i></div>
+                    <h4>Multi-platform Sharing</h4>
+                    <p>Share via link, text, email, social media, QR code, NFC, or embed on your website.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h4>Mobile First Design</h4>
+                    <p>Looks perfect on any device - optimized for mobile, tablet, and desktop with responsive design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h3>Ready to Transform Your Business Networking?</h3>
+                <p>Join thousands of professionals and businesses who have upgraded to TechKraft DigitalCards. Create your stunning digital card in minutes.</p>
+                <a href="#" class="cta-button">
+                    <i class="fas fa-rocket"></i>
+                    Start Free Trial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon"><i class="fas fa-id-card-alt"></i></div>
+                    <h3>TechKraft DigitalCards</h3>
+                    <p>Revolutionizing business networking with modern digital card solutions for every profession and business type.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919398015597" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#demos"><i class="fas fa-chevron-right"></i> Demos</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Templates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="techkraftdigitals.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:techkraftdigitals@gmail.com"><i class="fas fa-envelope"></i> techkraftdigitals@gmail.com</a></li>
+                        <li><a href="tel:+15551234567"><i class="fas fa-phone"></i> +91 93980 15597</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tech Kraft Digitals — 7-1-45/B, SK Road, Ameerpet, Hyderabad, Telangana, 500016, India</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> Support Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 TechKraft DigitalCards. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> for modern businesses</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Particles
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS("particles-js", {
+                    particles: {
+                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        color: { value: ["#8A2BE2", "#00D4FF", "#FF2E63"] },
+                        shape: { type: "circle" },
+                        opacity: { value: 0.5, random: true },
+                        size: { value: 3, random: true },
+                        line_linked: { enable: true, distance: 150, color: "#8A2BE2", opacity: 0.2,
+                        width: 1 },
+                        move: { enable: true, speed: 2, direction: "none", random: true, straight: false,
+                            out_mode: "out" }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: { enable: true, mode: "repulse" },
+                            onclick: { enable: true, mode: "push" }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    menuToggle.innerHTML = navMenu.classList.contains('active') ?
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+                document.querySelectorAll('#navMenu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cardDemos = document.querySelectorAll('.card-demo');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    const filterValue = this.getAttribute('data-filter');
+                    cardDemos.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'flex';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0) scale(1)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px) scale(0.95)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 400);
+                        }
+                    });
+                });
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for cards & features
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            cardDemos.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(40px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            document.querySelectorAll('.feature').forEach(feature => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(40px)';
+                feature.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(feature);
+            });
+
+            // Parallax
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                const floatingElements = document.querySelectorAll('.floating-element');
+                const orbs = document.querySelectorAll('.glowing-orb');
+                if (hero) hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+                floatingElements.forEach((el, i) => {
+                    el.style.transform = `translateY(${scrolled * 0.1}px) rotate(${scrolled * 0.02}deg)`;
+                });
+                orbs.forEach((orb, i) => {
+                    orb.style.transform =
+                    `translateY(${scrolled * 0.05}px) scale(${1 + scrolled * 0.0001})`;
+                });
+            });
+
+            // Hover effect on cards
+            cardDemos.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.card-icon');
+                    if (icon) icon.style.transform = 'rotate(10deg) scale(1.1)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.card-icon');
+                    if (icon) icon.style.transform = 'rotate(0) scale(1)';
+                });
+            });
+
+            // Ripple effect on buttons
+            document.querySelectorAll('.cta-button, .demo-btn, .filter-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 1000);
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>

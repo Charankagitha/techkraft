@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Local Business SEO -->
+    <meta name="geo.region" content="US-NY">
+    <meta name="geo.placename" content="New York">
+    <meta name="geo.position" content="40.7128;-74.0060">
+    <meta name="ICBM" content="40.7128, -74.0060">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drsarahmitchell.com">
+    <meta property="og:title" content="Dr. Sarah Mitchell | Internal Medicine Specialist">
+    <meta property="og:description" content="Board-certified internal medicine physician providing comprehensive healthcare. Book your appointment today.">
+    <meta property="og:image" content="https://drsarahmitchell.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dr. Sarah Mitchell - Medical Professional">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Dr. Sarah Mitchell">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://drsarahmitchell.com">
+    <meta property="twitter:title" content="Dr. Sarah Mitchell | Internal Medicine Specialist">
+    <meta property="twitter:description" content="Board-certified internal medicine physician providing comprehensive healthcare. Book your appointment today.">
+    <meta property="twitter:image" content="https://drsarahmitchell.com/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://drsarahmitchell.com">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Author -->
+    <meta name="author" content="Dr. Sarah Mitchell">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#3498db">
+    <meta name="msapplication-TileColor" content="#3498db">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3498db">
+    
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <title>Dr. Sarah Mitchell | Internal Medicine Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --primary-light: #5dade2;
+            --primary-dark: #2c81ba;
+            --secondary: #2ecc71;
+            --dark: #121212;
+            --dark-light: #2d2d2d;
+            --light: #ffffff;
+            --cream: #f5f9fd;
+            --glass: rgba(255, 255, 255, 0.95);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --radius: 28px;
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
+        }
+
+        .dark-theme {
+            --primary: #5dade2;
+            --primary-light: #7fbcea;
+            --primary-dark: #3498db;
+            --secondary: #58d68d;
+            --dark: #f0f0f0;
+            --dark-light: #e0e0e0;
+            --light: #121212;
+            --cream: #1a1a1a;
+            --glass: rgba(18, 18, 18, 0.95);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Base Mobile Styles */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 14px;
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: var(--cream); 
+            color: var(--dark); 
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: var(--transition);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Mobile Navigation */
+        .mobile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            font-size: 1.2rem;
+        }
+
+        .mobile-menu-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            z-index: 1001;
+            padding: 80px 30px 40px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+
+        .emergency-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .emergency-btn:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .theme-toggle-mobile {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        .theme-toggle-mobile:hover {
+            transform: rotate(30deg);
+        }
+
+        /* Desktop Navigation - Hidden on Mobile */
+        .desktop-nav {
+            display: none;
+        }
+
+        /* Mobile Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 40px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+
+        .doctor-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .doctor-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #home .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #home h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin: 10px 0;
+            color: white;
+            line-height: 1.1;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #a9d6f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #home .tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 20px 0 30px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .credential-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin: 10px auto;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.4);
+        }
+
+        .secondary-button {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .secondary-button:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Medical Stats */
+        .medical-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Mobile Sections */
+        section {
+            padding: 60px 0;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        .section-header p {
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 6px 15px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 100px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        /* Services Section */
+        .services-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            font-weight: 800;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .service-icon-container {
+            width: 100%;
+            height: 180px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .service-info {
+            padding: 25px;
+        }
+
+        .service-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-info .description {
+            font-size: 0.9rem;
+            color: var(--dark-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: var(--dark-light);
+        }
+
+        .service-features li i {
+            color: var(--secondary);
+        }
+
+        .service-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .appointment-btn {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .appointment-btn:hover {
+            opacity: 0.9;
+        }
+
+        .learn-btn {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .learn-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* About Doctor Section */
+        .about-container {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .education-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .education-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .education-list li i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .certification-badge {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .certification-badge:hover {
+            transform: translateY(-5px);
+            background: rgba(52, 152, 219, 0.2);
+        }
+
+        .certification-badge i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Instagram Section */
+        #instagram {
+            background: rgba(255,255,255,0.05);
+            margin: 30px 16px;
+            padding: 50px 20px;
+            border-radius: 20px;
+        }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .insta-post {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .insta-post:hover {
+            transform: scale(1.03);
+        }
+
+        .insta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        /* Mobile Reviews */
+        .reviews-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .reviews-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .review-card {
+            min-width: 280px;
+            background: var(--light);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Mobile Contact Section */
+        .location-box {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-details {
+            margin: 25px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .appointment-contact-btn {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .telemedicine-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        /* Operating Hours */
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .hour-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .hour-item h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 20px 30px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .footer-social a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            color: white;
+            background: var(--gradient);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 20px;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: var(--gradient);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Appointment Modal */
+        .appointment-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .appointment-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .appointment-form {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(0,0,0,0.1);
+            background: var(--light);
+            color: var(--dark);
+            font-family: 'Outfit', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Tablet Styles (768px and up) */
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+            
+            .container {
+                padding: 0 24px;
+            }
+            
+            .mobile-header {
+                display: none;
+            }
+            
+            .desktop-nav {
+                display: flex;
+                position: fixed;
+                top: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                max-width: 800px;
+                background: var(--glass);
+                backdrop-filter: blur(20px);
+                padding: 18px 40px;
+                border-radius: 100px;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .desktop-nav.scrolled {
+                padding: 14px 40px;
+                top: 20px;
+            }
+            
+            .nav-links {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+            
+            .nav-links a {
+                text-decoration: none;
+                color: var(--dark);
+                font-weight: 600;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                position: relative;
+                padding: 8px 0;
+            }
+            
+            .nav-links a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--gradient);
+                transition: width 0.4s ease;
+            }
+            
+            .nav-links a:hover::before {
+                width: 100%;
+            }
+            
+            .emergency-btn-desktop {
+                background: #e74c3c;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-weight: 600;
+                font-size: 0.75rem;
+                border: none;
+                cursor: pointer;
+                transition: var(--transition);
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            
+            .theme-toggle {
+                background: var(--gradient);
+                color: white;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                transition: var(--transition);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            #home {
+                padding: 100px 40px 60px;
+            }
+            
+            #home h1 {
+                font-size: 3.5rem;
+            }
+            
+            .doctor-avatar {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .cta-button {
+                max-width: 350px;
+            }
+            
+            .location-box {
+                flex-direction: row;
+                padding: 40px;
+            }
+            
+            .contact-actions {
+                flex-direction: row;
+            }
+            
+            .contact-btn {
+                flex: 1;
+            }
+            
+            .about-content {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .about-text {
+                flex: 1;
+            }
+            
+            .insta-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+            
+            .reviews-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                overflow-x: visible;
+            }
+            
+            .review-card {
+                min-width: 0;
+            }
+            
+            .hours-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .certifications-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .notification {
+                left: auto;
+                right: 30px;
+                bottom: 30px;
+                max-width: 300px;
+            }
+        }
+
+        /* Desktop Styles (1024px and up) */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+            
+            #home h1 {
+                font-size: 4.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .section-header h2 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .reviews-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .insta-grid {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 20px;
+            }
+            
+            .location-box {
+                gap: 50px;
+                padding: 50px;
+            }
+            
+            .contact-info h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Large Desktop Styles (1440px and up) */
+        @media (min-width: 1440px) {
+            #home h1 {
+                font-size: 5.5rem;
+            }
+            
+            .container {
+                padding: 0 40px;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) {
+            .service-card:hover {
+                transform: none;
+            }
+            
+            .service-card:active {
+                transform: scale(0.98);
+            }
+            
+            .cta-button:active,
+            .action-btn:active,
+            .contact-btn:active {
+                transform: scale(0.95);
+            }
+        }
+
+        /* High Contrast Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #3498db;
+                --secondary: #2ecc71;
+            }
+            
+            .service-card,
+            .review-card,
+            .location-box {
+                border: 2px solid var(--dark);
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-header">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            Dr. Mitchell
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <div class="logo" style="position: absolute; top: 20px; left: 30px;">
+            <i class="fas fa-heartbeat"></i>
+            Dr. Mitchell
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#about" onclick="closeMobileMenu()">About Dr. Mitchell</a>
+            <a href="#services" onclick="closeMobileMenu()">Services</a>
+            <a href="#reviews" onclick="closeMobileMenu()">Patient Reviews</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            <button class="emergency-btn" onclick="callEmergency()">
+                <i class="fas fa-phone-alt"></i> Emergency
+            </button>
+        </div>
+        <button class="theme-toggle-mobile" id="themeToggleMobile">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" id="desktopNav">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            Dr. Sarah Mitchell
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <button class="emergency-btn-desktop" onclick="callEmergency()">
+                <i class="fas fa-phone-alt"></i> Emergency
+            </button>
+            <button class="theme-toggle" id="themeToggleDesktop">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Appointment Modal -->
+    <div class="appointment-modal" id="appointmentModal">
+        <div class="appointment-form">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h3 style="color: var(--primary); margin: 0;">Book Appointment</h3>
+                <button onclick="closeAppointmentModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dark);">×</button>
+            </div>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="patientName">Full Name</label>
+                    <input type="text" id="patientName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="patientPhone">Phone Number</label>
+                    <input type="tel" id="patientPhone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="patientEmail">Email Address</label>
+                    <input type="email" id="patientEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Date</label>
+                    <input type="date" id="appointmentDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentTime">Preferred Time</label>
+                    <select id="appointmentTime" required>
+                        <option value="">Select time</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentReason">Reason for Visit</label>
+                    <textarea id="appointmentReason" rows="3" placeholder="Briefly describe the reason for your visit"></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-calendar-check"></i> Book Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="home">
+        <div class="hero-content">
+            <div class="doctor-avatar">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&auto=format&fit=crop" alt="Dr. Sarah Mitchell">
+            </div>
+            <p class="subtitle">BOARD CERTIFIED INTERNAL MEDICINE</p>
+            <h1>Dr. Sarah Mitchell</h1>
+            <p class="tagline">Compassionate, patient-focused healthcare with over 15 years of experience. Providing comprehensive medical care for adults in a welcoming environment.</p>
+            
+            <div class="credentials">
+                <div class="credential-badge">
+                    <i class="fas fa-graduation-cap"></i> Harvard Medical School
+                </div>
+                <div class="credential-badge">
+                    <i class="fas fa-award"></i> Board Certified
+                </div>
+                <div class="credential-badge">
+                    <i class="fas fa-stethoscope"></i> 15+ Years Experience
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin: 30px auto;">
+                <button class="cta-button" onclick="openAppointmentModal()">
+                    <i class="fas fa-calendar-alt"></i> Book Appointment
+                </button>
+                <button class="cta-button secondary-button" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-stethoscope"></i> View Services
+                </button>
+            </div>
+            
+            <div class="medical-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Patients Treated</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Patient Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <div class="section-header">
+                <p>About The Doctor</p>
+                <h2>Meet Dr. Sarah Mitchell</h2>
+            </div>
+
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Expertise & Compassion Combined</h3>
+                        <p>Dr. Sarah Mitchell is a board-certified internal medicine physician with over 15 years of clinical experience. She completed her medical training at Harvard Medical School and her residency at Massachusetts General Hospital.</p>
+                        
+                        <p>Dr. Mitchell believes in treating the whole person, not just the symptoms. She takes time to listen to her patients and develops personalized treatment plans that address both immediate health concerns and long-term wellness goals.</p>
+                        
+                        <div class="education-list">
+                            <li>
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Harvard Medical School</strong><br>
+                                    Doctor of Medicine (MD)
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-hospital"></i>
+                                <div>
+                                    <strong>Massachusetts General Hospital</strong><br>
+                                    Internal Medicine Residency
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-award"></i>
+                                <div>
+                                    <strong>American Board of Internal Medicine</strong><br>
+                                    Board Certified
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="margin-bottom: 20px; color: var(--primary);">Certifications & Affiliations</h3>
+                        <div class="certifications-grid">
+                            <div class="certification-badge">
+                                <i class="fas fa-user-md"></i>
+                                <div>Board Certified</div>
+                            </div>
+                            <div class="certification-badge">
+                                <i class="fas fa-heart"></i>
+                                <div>AHA Certified</div>
+                            </div>
+                            <div class="certification-badge">
+                                <i class="fas fa-star"></i>
+                                <div>AMA Member</div>
+                            </div>
+                            <div class="certification-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>HIPAA Certified</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-header">
+                <p>Medical Services</p>
+                <h2>Comprehensive Care</h2>
+            </div>
+
+            <div class="services-section">
+                <div class="section-title">
+                    <i class="fas fa-stethoscope"></i>
+                    Primary Care Services
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-heartbeat service-icon"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3>Preventive Care</h3>
+                            <p class="description">Annual physical exams, health screenings, vaccinations, and personalized wellness plans to maintain optimal health.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Annual Physical Exams</li>
+                                <li><i class="fas fa-check"></i> Health Risk Assessments</li>
+                                <li><i class="fas fa-check"></i> Immunizations</li>
+                            </ul>
+                            <div class="service-actions">
+                                <button class="action-btn appointment-btn" onclick="openAppointmentModal()">
+                                    <i class="fas fa-calendar-alt"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-lungs service-icon"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3>Chronic Disease Management</h3>
+                            <p class="description">Comprehensive management of diabetes, hypertension, asthma, and other chronic conditions with regular monitoring.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Diabetes Management</li>
+                                <li><i class="fas fa-check"></i> Hypertension Control</li>
+                                <li><i class="fas fa-check"></i> Asthma Care</li>
+                            </ul>
+                            <div class="service-actions">
+                                <button class="action-btn appointment-btn" onclick="openAppointmentModal()">
+                                    <i class="fas fa-calendar-alt"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-brain service-icon"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3>Mental Health & Wellness</h3>
+                            <p class="description">Screening, diagnosis, and treatment of depression, anxiety, stress management, and overall mental wellbeing.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Depression Screening</li>
+                                <li><i class="fas fa-check"></i> Anxiety Management</li>
+                                <li><i class="fas fa-check"></i> Stress Counseling</li>
+                            </ul>
+                            <div class="service-actions">
+                                <button class="action-btn appointment-btn" onclick="openAppointmentModal()">
+                                    <i class="fas fa-calendar-alt"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-section">
+                <div class="section-title">
+                    <i class="fas fa-procedures"></i>
+                    Specialized Services
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-vial service-icon"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3>Diagnostic Testing</h3>
+                            <p class="description">In-office laboratory testing, EKGs, referrals for imaging, and comprehensive diagnostic evaluations.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Laboratory Testing</li>
+                                <li><i class="fas fa-check"></i> EKG Monitoring</li>
+                                <li><i class="fas fa-check"></i> Diagnostic Referrals</li>
+                            </ul>
+                            <div class="service-actions">
+                                <button class="action-btn appointment-btn" onclick="openAppointmentModal()">
+                                    <i class="fas fa-calendar-alt"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-user-injured service-icon"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3>Acute Illness Care</h3>
+                            <p class="description">Treatment for infections, injuries, respiratory illnesses, and other acute medical conditions requiring immediate attention.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Infection Treatment</li>
+                                <li><i class="fas fa-check"></i> Injury Care</li>
+                                <li><i class="fas fa-check"></i> Same-day Appointments</li>
+                            </ul>
+                            <div class="service-actions">
+                                <button class="action-btn appointment-btn" onclick="openAppointmentModal()">
+                                    <i class="fas fa-calendar-alt"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-tablets service-icon"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3>Medication Management</h3>
+                            <p class="description">Comprehensive medication reviews, prescription management, and monitoring for optimal therapeutic outcomes.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Prescription Management</li>
+                                <li><i class="fas fa-check"></i> Medication Reviews</li>
+                                <li><i class="fas fa-check"></i> Side Effect Monitoring</li>
+                            </ul>
+                            <div class="service-actions">
+                                <button class="action-btn appointment-btn" onclick="openAppointmentModal()">
+                                    <i class="fas fa-calendar-alt"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="section-header">
+                <p>Patient Testimonials</p>
+                <h2>What Patients Say</h2>
+            </div>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">JR</div>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <strong>James Roberts</strong>
+                        </div>
+                    </div>
+                    <p>"Dr. Mitchell saved my life with early diabetes detection. Her thorough approach and genuine care are remarkable. I've never felt better!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">MC</div>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <strong>Maria Chen</strong>
+                        </div>
+                    </div>
+                    <p>"Finally a doctor who actually listens! Dr. Mitchell took time to understand my concerns and created a personalized treatment plan that worked."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">TP</div>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <strong>Thomas Parker</strong>
+                        </div>
+                    </div>
+                    <p>"Professional, compassionate, and highly knowledgeable. The office staff is wonderful too. Highly recommend Dr. Mitchell!"</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="instagram">
+        <div class="container">
+            <div class="section-header">
+                <p>Health & Wellness</p>
+                <h2>@DrSarahMitchellMD</h2>
+            </div>
+            <div class="insta-grid">
+                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&auto=format&fit=crop" class="insta-post" alt="Medical Office">
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&auto=format&fit=crop" class="insta-post" alt="Healthy Living">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&auto=format&fit=crop" class="insta-post" alt="Doctor Consultation">
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&auto=format&fit=crop" class="insta-post" alt="Wellness Tips">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&auto=format&fit=crop" class="insta-post" alt="Patient Care">
+                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&auto=format&fit=crop" class="insta-post" alt="Medical Equipment">
+            </div>
+            <div style="text-align: center;">
+                <a href="https://instagram.com" class="insta-btn" target="_blank">
+                    <i class="fab fa-instagram"></i> Follow for Health Tips
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="contact">
+            <div class="location-box">
+                <div class="contact-info">
+                    <h2>Schedule Your Visit</h2>
+                    <p>Conveniently located with flexible appointment options.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Mitchell Medical Center</strong><br>
+                                123 Wellness Avenue, Suite 300<br>
+                                New York, NY 10001
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours</strong>
+                                <div class="hours-grid">
+                                    <div class="hour-item">
+                                        <h4>Mon - Wed</h4>
+                                        <p>8am - 6pm</p>
+                                    </div>
+                                    <div class="hour-item">
+                                        <h4>Thursday</h4>
+                                        <p>8am - 8pm</p>
+                                    </div>
+                                    <div class="hour-item">
+                                        <h4>Friday</h4>
+                                        <p>8am - 5pm</p>
+                                    </div>
+                                    <div class="hour-item">
+                                        <h4>Saturday</h4>
+                                        <p>9am - 1pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>+1 (555) 123-HEALTH</strong><br>
+                                <small>For appointments & inquiries</small>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>contact@drsarahmitchell.com</strong><br>
+                                <small>For non-urgent questions</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-actions">
+                        <button class="contact-btn appointment-contact-btn" onclick="openAppointmentModal()">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </button>
+                        <button class="contact-btn telemedicine-btn" onclick="startTelemedicine()">
+                            <i class="fas fa-video"></i> Telemedicine Visit
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.24126349658!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1625685000000!5m2!1sen!2sus"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Dr. Sarah Mitchell</div>
+            <p>Board Certified Internal Medicine Physician</p>
+            <div class="footer-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 DR. SARAH MITCHELL, MD. All rights reserved.<br>
+                <small style="opacity: 0.5;">This website is for informational purposes only. For medical emergencies, call 911.</small>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <div>
+            <strong>Success!</strong>
+            <div id="notificationMessage">Action completed successfully</div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        
+        function openMobileMenu() {
+            mobileNav.classList.add('active');
+            mobileNavOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMobileMenu() {
+            mobileNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileNavOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Appointment Modal
+        const appointmentModal = document.getElementById('appointmentModal');
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        function openAppointmentModal() {
+            appointmentModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            closeMobileMenu();
+        }
+        
+        function closeAppointmentModal() {
+            appointmentModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('patientName').value;
+            const phone = document.getElementById('patientPhone').value;
+            const date = document.getElementById('appointmentDate').value;
+            const time = document.getElementById('appointmentTime').value;
+            
+            const message = `New Appointment Request:\n\nName: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}`;
+            
+            // In a real implementation, this would send to a server
+            // For demo, we'll show a success message
+            showNotification(`Appointment request sent for ${name}! We'll call you to confirm.`);
+            closeAppointmentModal();
+            appointmentForm.reset();
+        });
+        
+        // Close modal on Escape key or overlay click
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeAppointmentModal();
+                closeMobileMenu();
+            }
+        });
+        
+        appointmentModal.addEventListener('click', (e) => {
+            if (e.target === appointmentModal) {
+                closeAppointmentModal();
+            }
+        });
+        
+        // Emergency call function
+        function callEmergency() {
+            if (confirm('For medical emergencies, please call 911 immediately. Would you like to call the office for urgent care?')) {
+                window.location.href = 'tel:+15551233456';
+            }
+        }
+        
+        // Telemedicine function
+        function startTelemedicine() {
+            showNotification('Initiating telemedicine visit... Please ensure you have a stable internet connection.');
+            setTimeout(() => {
+                window.open('#', '_blank'); // In real implementation, this would link to telemedicine platform
+            }, 1500);
+        }
+        
+        // Theme Management
+        function setupTheme() {
+            const themeButtons = [
+                document.getElementById('themeToggleMobile'),
+                document.getElementById('themeToggleDesktop')
+            ].filter(Boolean);
+            
+            // Check system preference
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check localStorage for saved theme
+            const currentTheme = localStorage.getItem('theme');
+            
+            // Set initial theme
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    document.body.classList.add('dark-theme');
+                    themeButtons.forEach(btn => {
+                        if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+                    });
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    themeButtons.forEach(btn => {
+                        if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+                    });
+                }
+            };
+            
+            if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+                setTheme(true);
+                localStorage.setItem('theme', 'dark');
+            } else {
+                setTheme(false);
+                localStorage.setItem('theme', 'light');
+            }
+            
+            // Toggle theme
+            themeButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', () => {
+                        const isDark = document.body.classList.contains('dark-theme');
+                        if (isDark) {
+                            setTheme(false);
+                            localStorage.setItem('theme', 'light');
+                        } else {
+                            setTheme(true);
+                            localStorage.setItem('theme', 'dark');
+                        }
+                    });
+                }
+            });
+            
+            // Listen for system theme changes
+            prefersDarkScheme.addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches);
+                }
+            });
+        }
+        
+        // Navigation scroll effect
+        const desktopNav = document.getElementById('desktopNav');
+        if (desktopNav) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    desktopNav.classList.add('scrolled');
+                } else {
+                    desktopNav.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // Notification system
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const messageElement = document.getElementById('notificationMessage');
+            
+            messageElement.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 4000);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                    
+                    // Calculate offset for fixed header
+                    const headerHeight = window.innerWidth < 768 ? 70 : 100;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Touch optimization
+        document.addEventListener('touchstart', function() {}, {passive: true});
+        
+        // Initialize everything
+        setupTheme();
+        
+        // Handle resize events
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                // Close mobile menu on resize to desktop
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            }, 250);
+        });
+    </script>
+</body>
+</html>
