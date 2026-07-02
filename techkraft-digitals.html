@@ -11,13 +11,16 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/tk-logo.png">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Three.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
     </script>
-
+    <!-- Custom CSS -->
     <style>
         /* ---------- root & global ---------- */
         :root {
@@ -120,14 +123,7 @@
             display: inline-block;
             width: 42px;
             height: 42px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
-            position: relative;
-            transform-style: preserve-3d;
-            transform: perspective(500px) rotateY(15deg);
-            transition: transform 0.5s ease;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-            flex-shrink: 0;
+            background-color: white;
         }
         .brand-logo:hover {
             transform: perspective(500px) rotateY(0deg) scale(1.05);
