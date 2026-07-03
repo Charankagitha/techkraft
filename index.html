@@ -2,25 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Tech Kraft Digitals | Digital Solutions Agency</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="media/tk-logo.png">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Three.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
-    </script>
-    <!-- Custom CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <style>
         /* ---------- root & global ---------- */
         :root {
@@ -58,16 +53,11 @@
             background-repeat: no-repeat;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
+        h1, h2, h3, h4, h5 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
 
-        /* ---------- glass ---------- */
         .glass-effect {
             background: var(--glass-bg);
             backdrop-filter: blur(15px);
@@ -100,7 +90,6 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .navbar-scrolled {
             top: 10px;
             width: 100%;
@@ -109,7 +98,6 @@
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
         }
-
         .navbar-brand {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
@@ -139,8 +127,6 @@
             font-size: 14px;
             letter-spacing: 1px;
         }
-
-        /* navbar toggler (custom) */
         .navbar-toggler {
             border: none;
             padding: 0.3rem 0.6rem;
@@ -158,11 +144,9 @@
             font-size: 1.8rem;
             color: var(--text);
         }
-
         .navbar-collapse {
             transition: all 0.3s ease;
         }
-
         .nav-link {
             color: var(--text) !important;
             font-weight: 500;
@@ -759,16 +743,119 @@
             transform: rotate(15deg);
         }
         @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(5deg);
-            }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
         }
 
-        /* ---------- responsive nav fixes ---------- */
+        /* ---------- NEW: testimonials carousel ---------- */
+        .testimonials-section {
+            padding: 100px 0;
+            position: relative;
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .testimonial-carousel {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-card {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 1.5rem;
+        }
+        .card-inner {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.6);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: 0.3s;
+        }
+        .testimonial-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--primary-light);
+            box-shadow: 0 8px 20px rgba(102,126,234,0.2);
+        }
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        .testimonial-role {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            z-index: 5;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 15px 30px rgba(102,126,234,0.4);
+        }
+        .prev-btn {
+            left: 10px;
+        }
+        .next-btn {
+            right: 10px;
+        }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #d1d5db;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .dot.active {
+            background: var(--primary);
+            transform: scale(1.3);
+        }
+
+        /* responsive nav fixes */
         @media (max-width: 992px) {
             .navbar-modern {
                 width: 100%;
@@ -776,17 +863,9 @@
                 top: 0;
                 padding: 0.6rem 1rem;
             }
-            .navbar-brand {
-                font-size: 1.4rem;
-            }
-            .brand-logo {
-                width: 36px;
-                height: 36px;
-            }
-            .brand-logo::after {
-                font-size: 12px;
-            }
-
+            .navbar-brand { font-size: 1.4rem; }
+            .brand-logo { width: 36px; height: 36px; }
+            .brand-logo::after { font-size: 12px; }
             .navbar-collapse {
                 padding: 1rem 0.5rem 0.5rem;
                 background: rgba(255, 255, 255, 0.95);
@@ -794,322 +873,103 @@
                 margin-top: 0.5rem;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             }
-            .navbar-nav {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0.2rem;
-            }
-            .nav-link {
-                margin: 0.1rem 0;
-                padding: 0.7rem 1.2rem !important;
-                white-space: normal;
-                text-align: center;
-                border-radius: 50px;
-            }
-            .nav-cta {
-                margin-top: 0.5rem;
-                text-align: center;
-            }
-            .hero-title {
-                font-size: 2.8rem;
-            }
-            .about-content {
-                flex-direction: column;
-            }
-            .about-text {
-                padding-right: 0;
-                margin-bottom: 3rem;
-                margin-right: 0;
-            }
-            .services-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
+            .navbar-nav { flex-direction: column; align-items: stretch; gap: 0.2rem; }
+            .nav-link { margin: 0.1rem 0; padding: 0.7rem 1.2rem !important; white-space: normal; text-align: center; border-radius: 50px; }
+            .nav-cta { margin-top: 0.5rem; text-align: center; }
+            .hero-title { font-size: 2.8rem; }
+            .about-content { flex-direction: column; }
+            .about-text { padding-right: 0; margin-bottom: 3rem; margin-right: 0; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+            .carousel-btn { width: 42px; height: 42px; font-size: 1.2rem; }
         }
-
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.3rem;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            .float-1,
-            .float-2,
-            .float-3 {
-                display: none;
-            }
-            .navbar-modern {
-                padding: 0.5rem 0.8rem;
-            }
-            .navbar-brand {
-                font-size: 1.2rem;
-            }
-            .brand-logo {
-                width: 32px;
-                height: 32px;
-            }
-            .brand-logo::after {
-                font-size: 10px;
-            }
+            .hero-title { font-size: 2.3rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .float-1, .float-2, .float-3 { display: none; }
+            .navbar-modern { padding: 0.5rem 0.8rem; }
+            .navbar-brand { font-size: 1.2rem; }
+            .brand-logo { width: 32px; height: 32px; }
+            .brand-logo::after { font-size: 10px; }
         }
         @media (max-width: 576px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-            .contact-form,
-            .about-text,
-            .hero-content {
-                padding: 2rem;
-            }
-            .hero-section {
-                padding-top: 150px;
-            }
+            .hero-title { font-size: 2rem; }
+            .section-title h2 { font-size: 2.2rem; }
+            .contact-form, .about-text, .hero-content { padding: 2rem; }
+            .hero-section { padding-top: 150px; }
         }
 
-        /* chatbot styles (unchanged) */
+        /* chatbot styles */
         .chatbot-toggle {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
-            z-index: 1100;
+            position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px;
+            background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; cursor: pointer;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5); z-index: 1100;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
-        .chatbot-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.7);
-        }
-        .chatbot-toggle i {
-            font-size: 32px;
-            color: white;
-            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-        }
+        .chatbot-toggle:hover { transform: scale(1.1); box-shadow: 0 15px 40px rgba(102, 126, 234, 0.7); }
+        .chatbot-toggle i { font-size: 32px; color: white; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2)); }
         .chat-window {
-            position: fixed;
-            bottom: 120px;
-            right: 30px;
-            width: 380px;
-            height: 550px;
-            background: #ffffff;
-            border-radius: 28px;
-            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(102, 126, 234, 0.2);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 1100;
-            transform: scale(0);
-            opacity: 0;
-            transform-origin: bottom right;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            pointer-events: none;
+            position: fixed; bottom: 120px; right: 30px; width: 380px; height: 550px;
+            background: #ffffff; border-radius: 28px; box-shadow: 0 25px 55px rgba(0,0,0,0.25), 0 0 0 1px rgba(102,126,234,0.2);
+            display: flex; flex-direction: column; overflow: hidden; z-index: 1100;
+            transform: scale(0); opacity: 0; transform-origin: bottom right;
+            transition: transform 0.3s ease, opacity 0.3s ease; pointer-events: none;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
-        .chat-window.open {
-            transform: scale(1);
-            opacity: 1;
-            pointer-events: auto;
-        }
+        .chat-window.open { transform: scale(1); opacity: 1; pointer-events: auto; }
         .chat-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 18px 20px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2); padding: 18px 20px; color: white;
+            display: flex; justify-content: space-between; align-items: center;
         }
-        .chat-header h4 {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .chat-header h4 i {
-            font-size: 1.4rem;
-        }
+        .chat-header h4 { margin: 0; font-size: 1.2rem; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+        .chat-header h4 i { font-size: 1.4rem; }
         .close-chat {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s;
+            background: rgba(255,255,255,0.2); border: none; color: white; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;
         }
-        .close-chat:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: rotate(90deg);
-        }
-        .chat-messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-            background: #f9fafc;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .message {
-            display: flex;
-            flex-direction: column;
-            max-width: 85%;
-            animation: fadeInUp 0.3s ease;
-        }
-        .message.bot {
-            align-self: flex-start;
-        }
-        .message.user {
-            align-self: flex-end;
-        }
-        .bubble {
-            padding: 12px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            word-wrap: break-word;
-        }
-        .bot .bubble {
-            background: #e9eef5;
-            color: #1e293b;
-            border-bottom-left-radius: 5px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-        }
-        .user .bubble {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-bottom-right-radius: 5px;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-        }
-        .timestamp {
-            font-size: 0.7rem;
-            color: #94a3b8;
-            margin-top: 5px;
-            margin-left: 12px;
-            margin-right: 12px;
-        }
-        .chat-input-area {
-            padding: 15px;
-            background: white;
-            border-top: 1px solid #e2e8f0;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        .chat-input-area input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 1px solid #cbd5e1;
-            border-radius: 40px;
-            outline: none;
-            font-size: 0.9rem;
-            transition: 0.2s;
-        }
-        .chat-input-area input:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
-        }
-        .send-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border: none;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .send-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 12px rgba(102, 126, 234, 0.4);
-        }
-        .typing-indicator {
-            display: flex;
-            gap: 5px;
-            padding: 10px 16px;
-            background: #e9eef5;
-            border-radius: 20px;
-            width: fit-content;
-        }
-        .typing-indicator span {
-            width: 8px;
-            height: 8px;
-            background: #94a3b8;
-            border-radius: 50%;
-            display: inline-block;
-            animation: typingBounce 1.3s infinite ease-in-out;
-        }
-        .typing-indicator span:nth-child(1) {
-            animation-delay: 0s;
-        }
-        .typing-indicator span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .typing-indicator span:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        @keyframes typingBounce {
-            0%,
-            60%,
-            100% {
-                transform: translateY(0);
-                opacity: 0.5;
-            }
-            30% {
-                transform: translateY(-8px);
-                opacity: 1;
-            }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        .close-chat:hover { background: rgba(255,255,255,0.4); transform: rotate(90deg); }
+        .chat-messages { flex: 1; overflow-y: auto; padding: 20px; background: #f9fafc; display: flex; flex-direction: column; gap: 12px; }
+        .message { display: flex; flex-direction: column; max-width: 85%; animation: fadeInUp 0.3s ease; }
+        .message.bot { align-self: flex-start; }
+        .message.user { align-self: flex-end; }
+        .bubble { padding: 12px 16px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; word-wrap: break-word; }
+        .bot .bubble { background: #e9eef5; color: #1e293b; border-bottom-left-radius: 5px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .user .bubble { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-bottom-right-radius: 5px; box-shadow: 0 2px 8px rgba(102,126,234,0.3); }
+        .timestamp { font-size: 0.7rem; color: #94a3b8; margin-top: 5px; margin-left: 12px; margin-right: 12px; }
+        .chat-input-area { padding: 15px; background: white; border-top: 1px solid #e2e8f0; display: flex; gap: 10px; align-items: center; }
+        .chat-input-area input { flex: 1; padding: 12px 16px; border: 1px solid #cbd5e1; border-radius: 40px; outline: none; font-size: 0.9rem; transition: 0.2s; }
+        .chat-input-area input:focus { border-color: #667eea; box-shadow: 0 0 0 2px rgba(102,126,234,0.2); }
+        .send-btn { background: linear-gradient(135deg, #667eea, #764ba2); border: none; width: 44px; height: 44px; border-radius: 50%; color: white; font-size: 1.2rem; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; }
+        .send-btn:hover { transform: scale(1.05); box-shadow: 0 5px 12px rgba(102,126,234,0.4); }
+        .typing-indicator { display: flex; gap: 5px; padding: 10px 16px; background: #e9eef5; border-radius: 20px; width: fit-content; }
+        .typing-indicator span { width: 8px; height: 8px; background: #94a3b8; border-radius: 50%; display: inline-block; animation: typingBounce 1.3s infinite ease-in-out; }
+        .typing-indicator span:nth-child(1){ animation-delay: 0s; }
+        .typing-indicator span:nth-child(2){ animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3){ animation-delay: 0.4s; }
+        @keyframes typingBounce { 0%,60%,100%{ transform: translateY(0); opacity: 0.5; } 30%{ transform: translateY(-8px); opacity: 1; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 576px) {
-            .chat-window {
-                width: 90vw;
-                right: 5vw;
-                bottom: 100px;
-                height: 500px;
-            }
-            .chatbot-toggle {
-                width: 55px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-            .chatbot-toggle i {
-                font-size: 26px;
-            }
+            .chat-window { width: 90vw; right: 5vw; bottom: 100px; height: 500px; }
+            .chatbot-toggle { width: 55px; height: 55px; bottom: 20px; right: 20px; }
+            .chatbot-toggle i { font-size: 26px; }
         }
+
+        .walkthrough-section { padding: 100px 0; position: relative; }
+        .walkthrough-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+        .walkthrough-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px var(--shadow); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid var(--border); transform-style: preserve-3d; transform: perspective(1000px) translateZ(0); }
+        .walkthrough-card:hover { transform: perspective(1000px) translateZ(15px) rotateY(3deg); box-shadow: 0 25px 60px var(--shadow-hover); }
+        .walkthrough-card img { width: 100%; height: 200px; object-fit: cover; background: #e9eef5; transition: transform 0.4s ease; }
+        .walkthrough-card:hover img { transform: scale(1.04); }
+        .walkthrough-card .card-body { padding: 1.5rem; }
+        .walkthrough-card .card-body h5 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .walkthrough-card .card-body p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .walkthrough-card .card-body a { color: var(--primary); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .walkthrough-card .card-body a:hover i { transform: translateX(5px); }
+        .walkthrough-card .card-body a i { transition: transform 0.3s ease; }
+        @media (max-width: 992px) { .walkthrough-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 576px) { .walkthrough-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -1128,7 +988,7 @@
                     <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="app-files/index.html">360 Walkthrough</a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="#walkthrough">Our Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link nav-cta" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -1238,6 +1098,84 @@
         </div>
     </section>
 
+    <!-- NEW: Testimonials Section with Movable Carousel -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from businesses we've helped grow.</p>
+            </div>
+            <div class="testimonial-carousel" id="testimonialCarousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="#" alt="Client" class="testimonial-avatar">
+                            <p class="testimonial-text">"Tech Kraft Digitals transformed our online presence. The 360° walkthrough brought our restaurant to life online."</p>
+                            <div class="testimonial-name">Viswa</div>
+                            <div class="testimonial-role">Owner, Swadesi Spice</div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="#" alt="Client" class="testimonial-avatar">
+                            <p class="testimonial-text">"Professional, creative, and timely. Our new website is stunning and drives actual leads. Highly recommend their web development team."</p>
+                            <div class="testimonial-name">Rekha Khanojia</div>
+                            <div class="testimonial-role">CSO, Aarohi AIS school</div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="#" alt="Client" class="testimonial-avatar">
+                            <p class="testimonial-text">"The digital business card is a game changer for networking, It's The replacement for traditional business cards.Exceptional quality and support."</p>
+                            <div class="testimonial-name">kiran</div>
+                            <div class="testimonial-role">Chef</div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="#" alt="Client" class="testimonial-avatar">
+                            <p class="testimonial-text">"Their Google Business Profile optimization significantly increased our online visibility and customer engagement."</p>
+                            <div class="testimonial-name">Kishore</div>
+                            <div class="testimonial-role">MD, Abhiruchi Swagruha Foods</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Walkthrough Samples Section -->
+    <section class="walkthrough-section" id="walkthrough">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Previous Work Samples</h2>
+                <p>Explore immersive virtual tours created for our clients.</p>
+                <p>Check out our portfolio of completed projects.</p>
+            </div>
+            <div class="walkthrough-grid">
+                <div class="walkthrough-card">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fFJlc3R1YXJhbnR8ZW58MHx8MHx8fDA%3D" alt="Restaurant Walkthrough">
+                    <div class="card-body"><h5>Restaurant Interior Walkthrough</h5><p>Dining area walkthrough.</p><a href="app-files/index.html" target="_blank">View Sample <i class="fas fa-arrow-right"></i></a></div>
+                </div>
+                <div class="walkthrough-card">
+                    <img src="https://plus.unsplash.com/premium_vector-1734608029824-0dc756e0d64d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D" alt="International School Website">
+                    <div class="card-body"><h5>International School Website</h5><p>Modern website design for an international school.</p><a href="https://aarohiais.org/" target="_blank">View Sample <i class="fas fa-arrow-right"></i></a></div>
+                </div>
+                <div class="walkthrough-card">
+                    <img src="https://plus.unsplash.com/premium_vector-1712161707509-6ccb439539de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGlnaXRhbCUyMGNhcmR8ZW58MHx8MHx8fDA%3D" alt="Digital Card">
+                    <div class="card-body"><h5>Digital Card</h5><p>A modern digital business card design.</p><a href="chef.html" target="_blank">View Sample <i class="fas fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section class="contact-section" id="contact">
         <div class="container">
@@ -1273,8 +1211,8 @@
                     <p>Transforming businesses through innovative digital solutions. We help you succeed in the digital world.</p>
                     <div class="social-links">
                         <a href="https://wa.me/919398015597" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.google.com/maps/contrib/106696559807969419914/photos/@17.0545614,78.2004457,16z/data=!3m1!4b1!4m3!8m2!3m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" class="social-link" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                        <a href="mailto:techkraftdigitals@gmail.com" class="social-link" target="_blank"><i class="fas fa-envelope"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -1291,6 +1229,7 @@
             <div class="copyright"><p>&copy; <span id="current-year">2023</span> Tech Kraft Digitals. All rights reserved.</p></div>
         </div>
     </footer>
+
     <!-- Chatbot -->
     <div class="chatbot-toggle" id="chatbotToggle"><i class="fas fa-comment-dots"></i></div>
     <div class="chat-window" id="chatWindow">
@@ -1303,11 +1242,10 @@
             <button class="send-btn" id="sendMsgBtn"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
-    </script>
 
-    <!-- Scripts -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         // current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -1317,16 +1255,12 @@
             const navbar = document.querySelector('.navbar-modern');
             if (window.scrollY > 100) navbar.classList.add('navbar-scrolled');
             else navbar.classList.remove('navbar-scrolled');
-            // parallax
-            const scrolled = window.pageYOffset;
             document.querySelectorAll('.floating-element').forEach(el => {
-                const speed = el.classList.contains('float-1') ? 0.5 : el.classList.contains('float-2') ? 0.3 :
-                0.7;
-                el.style.transform = `translateY(${scrolled * speed}px)`;
+                const speed = el.classList.contains('float-1') ? 0.5 : el.classList.contains('float-2') ? 0.3 : 0.7;
+                el.style.transform = `translateY(${window.pageYOffset * speed}px)`;
             });
         });
 
-        // video play
         function playVideo() {
             const video = document.getElementById('walkthrough-video');
             video.play();
@@ -1335,51 +1269,33 @@
             setTimeout(() => { overlay.style.display = 'none'; }, 300);
         }
 
-        // ============================================================
-        //  CONTACT FORM → GOOGLE SHEETS (via Apps Script Webhook)
-        // ============================================================
-        // ⚠️ REPLACE THIS URL with your own Google Apps Script deployment URL
         const GOOGLE_SHEET_WEBHOOK = 'https://script.google.com/macros/s/AKfycbwfXM1bzE3hefTA0LfqKWaICmwwHn2nCmuffpRc_WdAUqxqHO6KFCcX5yairOcltgg6lQ/exec ';
-
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
             const name = document.getElementById('formName').value.trim();
             const email = document.getElementById('formEmail').value.trim();
             const phone = document.getElementById('formPhone').value.trim();
             const subject = document.getElementById('formSubject').value.trim();
             const message = document.getElementById('formMessage').value.trim();
-
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.textContent;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
             btn.disabled = true;
-
             const payload = { name, email, phone, subject, message };
-
-            // Send to Google Sheet
-            fetch(GOOGLE_SHEET_WEBHOOK, {
-                    method: 'POST',
-                    mode: 'no-cors', // needed to avoid CORS errors
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                })
+            fetch(GOOGLE_SHEET_WEBHOOK, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
                 .then(() => {
-                    // Even with no-cors we get an opaque response, so we treat it as success
                     alert('✅ Thank you! Your message has been sent. We will get back to you soon.');
                     this.reset();
                     btn.textContent = originalText;
                     btn.disabled = false;
                 })
-                .catch((err) => {
-                    console.error('Google Sheets error:', err);
+                .catch(() => {
                     alert('❌ Something went wrong. Please try again or contact us directly.');
                     btn.textContent = originalText;
                     btn.disabled = false;
                 });
         });
 
-        // smooth scroll & active nav
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1391,7 +1307,6 @@
                     if (targetId !== '#contact') this.classList.add('active');
                     else document.querySelector('.nav-cta')?.classList.add('active');
                     window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
-                    // close mobile menu after click
                     const collapse = document.querySelector('.navbar-collapse');
                     if (collapse.classList.contains('show')) {
                         const bsCollapse = bootstrap.Collapse.getInstance(collapse);
@@ -1401,14 +1316,12 @@
             });
         });
 
-        // active nav on scroll
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section');
             const pos = window.scrollY + 150;
             sections.forEach(section => {
-                const top = section.offsetTop,
-                    height = section.clientHeight;
+                const top = section.offsetTop, height = section.clientHeight;
                 if (pos >= top && pos < top + height) current = section.getAttribute('id');
             });
             document.querySelectorAll('.nav-link').forEach(link => {
@@ -1417,7 +1330,6 @@
             });
         });
 
-        // three.js background
         function initThreeJS() {
             const container = document.getElementById('threejs-bg');
             if (!container) return;
@@ -1428,16 +1340,13 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
             container.appendChild(renderer.domElement);
-
             const ambient = new THREE.AmbientLight(0xffffff, 0.5);
             scene.add(ambient);
             const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
             dirLight.position.set(5, 5, 5);
             scene.add(dirLight);
-
             const geometry = new THREE.IcosahedronGeometry(1, 1);
-            const material = new THREE.MeshPhongMaterial({ color: 0x667eea, shininess: 100, transparent: true,
-                opacity: 0.3 });
+            const material = new THREE.MeshPhongMaterial({ color: 0x667eea, shininess: 100, transparent: true, opacity: 0.3 });
             const shapes = [];
             for (let i = 0; i < 8; i++) {
                 const shape = new THREE.Mesh(geometry, material.clone());
@@ -1445,21 +1354,17 @@
                 shape.position.set((Math.random() - 0.5) * 20, (Math.random() - 0.5) * 20, (Math.random() - 0.5) * 10);
                 const s = Math.random() * 0.5 + 0.3;
                 shape.scale.set(s, s, s);
-                shape.rotationSpeed = { x: (Math.random() - 0.5) * 0.02, y: (Math.random() - 0.5) * 0.02, z: (Math
-                    .random() - 0.5) * 0.02 };
+                shape.rotationSpeed = { x: (Math.random() - 0.5) * 0.02, y: (Math.random() - 0.5) * 0.02, z: (Math.random() - 0.5) * 0.02 };
                 shape.floatSpeed = Math.random() * 0.5 + 0.5;
                 shape.floatOffset = Math.random() * Math.PI * 2;
                 scene.add(shape);
                 shapes.push(shape);
             }
-
-            function resize() {
+            window.addEventListener('resize', () => {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
-            }
-            window.addEventListener('resize', resize);
-
+            });
             function animate() {
                 requestAnimationFrame(animate);
                 shapes.forEach(shape => {
@@ -1477,7 +1382,55 @@
         window.addEventListener('load', initThreeJS);
     </script>
 
+    <script>
+        // ============================================================
+        //  TESTIMONIALS CAROUSEL (movable)
+        // ============================================================
+        const track = document.getElementById('carouselTrack');
+        const cards = Array.from(document.querySelectorAll('.testimonial-card'));
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('carouselDots');
+        let currentIndex = 0;
 
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelectorAll('.dot').forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentIndex);
+            });
+        }
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            cards.forEach((_, idx) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (idx === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentIndex = idx;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updateCarousel();
+        });
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            updateCarousel();
+        });
+
+        // Optional auto-swipe every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updateCarousel();
+        }, 5000);
+
+        createDots();
+    </script>
 
     <script>
         // ============================================================
@@ -1519,111 +1472,37 @@
             if (indicator) indicator.remove();
         }
 
-        // ---------- Enhanced command rules (20+ intents) ----------
         function getBotResponse(userMsg) {
             const msg = userMsg.toLowerCase().trim();
-
-            // ---- GREETINGS ----
             if (/\b(hi|hello|hey|greetings|good morning|good afternoon|good evening|howdy)\b/.test(msg))
-                return "Hello! 👋 Welcome to Tech Kraft Digitals! I'm your AI assistant. How can I help you today? You can ask about our services, pricing, portfolio, or book a consultation.";
-
-            // ---- SERVICES OVERVIEW ----
+                return "Hello! 👋 Welcome to Tech Kraft Digitals! I'm your AI assistant. How can I help you today?";
             if (/\b(services|offer|what do you do|what services|offerings)\b/.test(msg))
-                return "We offer a full range of digital solutions:\n• 360° Walkthrough Tours\n• SEO for GBP (Google Business Profile)\n• Web Development\n• Digital Business Cards\n• App Development (iOS & Android)\n• Social Media Management\n• Content Creation & Strategy\nWhich one interests you?";
-
-            // ---- 360 WALKTHROUGH ----
+                return "We offer 360° Walkthroughs, SEO, Web Development, Digital Cards, App Development & more. Which one interests you?";
             if (/\b(360|walkthrough|virtual tour|street view|panorama)\b/.test(msg))
-                return "🏛️ Our 360° Walkthrough service creates immersive virtual tours for real estate, restaurants, hotels, offices, and retail spaces. It lets customers explore your venue remotely. We handle the entire process — from shooting to publishing. Would you like to see a demo?";
-
-            // ---- SEO ----
+                return "🏛️ Our 360° Walkthrough service creates immersive virtual tours. Want to see a demo?";
             if (/\b(seo|search engine|google business|gbp|ranking|organic|traffic|keywords)\b/.test(msg))
-                return "📈 Our SEO for GBP (Google Business Profile) boosts your local visibility. We do: keyword research, on-page optimization, local citations, review management, and performance tracking. We help you rank higher and attract more qualified leads. Want a free audit?";
-
-            // ---- WEB DEVELOPMENT ----
+                return "📈 Our SEO for GBP boosts your local visibility. Want a free audit?";
             if (/\b(web|website|development|site|ecommerce|e-commerce|shop|landing page)\b/.test(msg))
-                return "🖥️ We build modern, fast, and responsive websites tailored to your brand. From simple landing pages to full e-commerce platforms, we focus on UX, speed, and conversion. Technologies: HTML, CSS, JS, React, Node.js, WordPress, Shopify.";
-
-            // ---- APP DEVELOPMENT ----
+                return "🖥️ We build modern, fast websites tailored to your brand.";
             if (/\b(app|mobile|android|ios|application|native|flutter)\b/.test(msg))
-                return "📱 We design and develop native & cross-platform mobile apps for iOS and Android. Our apps are user-friendly, scalable, and built to engage. Whether it's a business app or a consumer product, we deliver quality.";
-
-            // ---- DIGITAL BUSINESS CARDS ----
+                return "📱 We design and develop mobile apps for iOS and Android.";
             if (/\b(digital card|business card|nfc|qr|contact share|vcard)\b/.test(msg))
-                return "💳 Our Digital Business Cards let you share contact info, social links, and portfolio instantly via NFC tap or QR code. It's eco-friendly, modern, and leaves a lasting impression. Perfect for networking events!"; // ---- SOCIAL MEDIA ----
-            if (/\b(social media|instagram|facebook|linkedin|twitter|content|post|handling|management)\b/.test(msg))
-                return "📱 We manage social media across all major platforms. Services include content creation, scheduling, community engagement, analytics, and ad management. Let's grow your brand's online presence!";
-
-            // ---- PRICING / COST ----
+                return "💳 Our Digital Business Cards let you share info instantly via NFC or QR.";
             if (/\b(price|cost|pricing|quote|how much|charges|fee|budget|investment|rates)\b/.test(msg))
-                return "💰 Our pricing is project-based and depends on your specific needs. Every project is customized. For an accurate quote, please share your requirements or use the contact form. We'll get back to you within 24 hours!";
-
-            // ---- PORTFOLIO / WORK ----
+                return "💰 Pricing depends on your needs. Please share requirements for a custom quote.";
             if (/\b(portfolio|work|projects|past work|case study|examples|samples|showcase)\b/.test(msg))
-                return "🎨 We have worked with businesses across real estate, hospitality, retail, and technology sectors. You can view some of our projects on our portfolio page. Would you like me to send you a link?";
-
-            // ---- BOOK CONSULTATION / MEETING ----
+                return "🎨 Check our portfolio section for samples!";
             if (/\b(book|consultation|meeting|schedule|appointment|call|discuss|chat with team)\b/.test(msg))
-                return "📅 I'd be happy to schedule a consultation for you! Please share your name, phone number, and preferred time, and I'll have our team reach out within 2 hours. Alternatively, you can use the contact form on our website.";
-
-            // ---- TEAM ----
-            if (/\b(team|who we are|founders|staff|people|about you|company)\b/.test(msg))
-                return "👨‍💻 Tech Kraft Digitals is a passionate team of designers, developers, and digital marketers. We combine creativity with technical expertise to deliver exceptional results. We're based in Hyderabad and serve clients worldwide.";
-
-            // ---- LOCATION / ADDRESS ----
-            if (/\b(location|address|where|office|visit|find us|hyderabad|ameerpet)\b/.test(msg))
-                return "📍 We are located at: 7-1-45/B, SK Road, DK Road, Ameerpet, Hyderabad 500016. We're open Mon-Fri 9:00 am - 6:00 pm. Feel free to visit or call us at +91 93980 15597.";
-
-            // ---- HOURS / TIMING ----
-            if (/\b(hours|timing|open|closed|work hours|business hours)\b/.test(msg))
-                return "⏰ Our business hours are: Monday – Friday, 9:00 am – 6:00 pm (IST). We also respond to messages and emails outside these hours.";
-
-            // ---- CONTACT / SUPPORT ----
+                return "📅 Please share your name and phone; we'll reach out within 2 hours.";
             if (/\b(contact|reach|email|phone|call|support|helpline)\b/.test(msg))
-                return "📞 You can reach us via:\n• Phone: +91 93980 15597\n• Email: techkraftdigitals@gmail.com\n• Or use the contact form on our website. We reply within 24 hours!";
-
-            // ---- REFUND / CANCELLATION ----
-            if (/\b(refund|cancel|return|money back|policy|terms)\b/.test(msg))
-                return "🔄 We offer a satisfaction guarantee. If you're not happy with our service, we'll work with you to make it right. For detailed terms, please refer to our Refund & Cancellation Policy on the website.";
-
-            // ---- PARTNERSHIP / COLLABORATION ----
-            if (/\b(partner|collaborate|affiliate|join|work together|strategic)\b/.test(msg))
-                return "🤝 We're open to partnerships and collaborations! Whether you're a freelancer, agency, or business, we'd love to explore opportunities. Reach out via the contact form with your proposal.";
-
-            // ---- CASE STUDIES ----
-            if (/\b(case study|success story|result|client success|testimonial|review)\b/.test(msg))
-                return "📊 We have helped businesses achieve 2x growth through our digital strategies. Check out our case studies page for real-world results. Want a success story tailored to your industry?";
-
-            // ---- TECHNOLOGY STACK ----
-            if (/\b(tech|stack|technology|tools|platform|framework|language)\b/.test(msg))
-                return "🛠️ Our tech stack includes: HTML5, CSS3, JavaScript, React, Node.js, Python, PHP, WordPress, Shopify, Flutter, Swift, Kotlin, Three.js, and more. We choose the best tools for your project.";
-
-            // ---- TARGET INDUSTRIES ----
-            if (/\b(industry|sector|real estate|hospitality|retail|healthcare|education|ecommerce)\b/.test(msg))
-                return "🏢 We serve a wide range of industries: real estate, hospitality, retail, healthcare, education, e-commerce, and more. Our solutions are tailored to each sector's unique needs.";
-
-            // ---- BESPOKE / CUSTOM WORK ----
-            if (/\b(custom|bespoke|tailored|unique|specific|personalized)\b/.test(msg))
-                return "✨ Every project is unique. We don't do one-size-fits-all. We take time to understand your business, goals, and audience to deliver a solution that truly fits. Let's discuss your project!"; // ---- STARTUP SUPPORT ----
-            if (/\b(startup|new business|entrepreneur|launch|early stage)\b/.test(msg))
-                return "🚀 We love working with startups! We offer affordable digital packages for early-stage businesses — from branding and website to SEO and social media. Let's build your digital presence from the ground up.";
-
-            // ---- ACCESSIBILITY ----
-            if (/\b(accessibility|disabled|wcag|screen reader|inclusive|a11y)\b/.test(msg))
-                return "♿ We care about inclusive design. We follow WCAG guidelines to ensure our websites and apps are accessible to all users, including those with disabilities. Accessibility is a priority.";
-
-            // ---- THANK YOU ----
+                return "📞 Phone: +91 93980 15597 | Email: techkraftdigitals@gmail.com";
             if (/\b(thank|thanks|appreciate|grateful)\b/.test(msg))
-                return "😊 You're very welcome! It's my pleasure to help. If you have any more questions, feel free to ask. Or, you can fill out the contact form to get started with a project.";
-
-            // ---- GOODBYE ----
+                return "😊 You're welcome! Feel free to ask anything else.";
             if (/\b(bye|goodbye|see you|later|exit|quit|stop)\b/.test(msg))
-                return "👋 Goodbye! Thank you for visiting Tech Kraft Digitals. Feel free to come back anytime. Have a great day!";
-
-            // ---- FALLBACK (catch-all) ----
-            return "Thank you for your enquiry! 😊 I can help you with: services, pricing, booking a consultation, portfolio, tech stack, and more. Could you please tell me what you're interested in? (e.g., 360 walkthrough, SEO, web development, app development)";
+                return "👋 Goodbye! Have a great day!";
+            return "I'm here to help! Ask me about services, pricing, or booking a consultation.";
         }
 
-        // ---- SEND USER MESSAGE ----
         async function sendUserMessage() {
             const text = chatInput.value.trim();
             if (!text) return;
@@ -1634,15 +1513,6 @@
                 removeTyping();
                 const reply = getBotResponse(text);
                 addMessage(reply, false);
-
-                // If user asks for a callback or consultation, offer follow-up
-                if (/\b(callback|call me|consultation|meeting|book|schedule)\b/.test(text.toLowerCase())) {
-                    setTimeout(() => {
-                        addMessage(
-                            "📞 Great! Could you please share your name and phone number via the contact form? I'll make sure our team reaches out to you within 2 hours.",
-                            false);
-                    }, 600);
-                }
             }, 800);
         }
 
